@@ -1,0 +1,15 @@
+<h1>Edit Card # <%= @card.id %></h1>
+<br>
+<%= form_with(model: @card, local: true) do |form| %>
+  <%= form.label :question %>
+  <%= form.text_field :question %>
+  <br>
+  <br>
+  <%= form.label :answer %>
+  <%= form.text_field :answer %>
+  <br>
+  <br>
+  <%= form.submit %>
+<% end %>
+<br>
+<%= link_to 'All Cards', cards_path %>

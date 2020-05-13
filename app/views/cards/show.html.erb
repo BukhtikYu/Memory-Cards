@@ -1,0 +1,12 @@
+<h1>Card #<%= @card.id %></h1>
+<p>question: <%= @card.question %></p>
+<p>answer: <%= @card.answer %></p>
+<br>
+<%= link_to 'All Cards', cards_path %>
+<br>
+<br>
+<%= link_to 'Edit Card', cards_edit_path(@card) %>
+<br>
+<br>
+<%= link_to 'Destroy', @card, method: :delete,
+data: { confirm: 'Are you sure?' } %>

@@ -1,0 +1,17 @@
+<h1>Cards</h1>
+<br>
+<%= link_to 'New Card', cards_new_path %>
+<br>
+<br>
+<table>
+  <th>ID</th>
+  <th>Question</th>
+  <th>Answer</th>
+  <% @cards.each do |card| %>
+    <tr>
+	  <td><%= link_to card.id, card_path(card) %></td>
+	  <td><%= card.question %></td>
+	  <td><%= card.answer %></td>
+    </tr>
+  <% end %>
+</table>
