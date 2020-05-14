@@ -1,0 +1,3 @@
+<Li>Logged in as <strong><%= current_user.email %></strong></Li>>
+<li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>Edit profile</li>
+<li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>Logout</li>

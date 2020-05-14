@@ -1,0 +1,12 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <% if user_signed_in? %>
+        <%= render '/layouts/headers/header_signed_in' %>
+      <% else %>
+        <%= render '/layouts/headers/header_not_signed_in' %>
+      <% end %>
+    </ul>
+  </div>
+</nav>
