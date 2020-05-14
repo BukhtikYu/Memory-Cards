@@ -1,12 +1,15 @@
 # frozen_string_literal: true
 
 class CardsController < ApplicationController
+  before_action :authenticate_user!
+  
   def new
     @card = Card.new
   end
 
   def create
     @card = Card.new(card_params)
+    @card.user_id = current_user.id
     if @card.save
       redirect_to @card
     else
@@ -46,4 +49,5 @@ class CardsController < ApplicationController
   def card_params
     params.require(:card).permit(:question, :answer)
   end
+
 end

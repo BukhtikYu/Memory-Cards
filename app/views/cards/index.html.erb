@@ -7,11 +7,13 @@
   <th>ID</th>
   <th>Question</th>
   <th>Answer</th>
+  <th>Author</th>
   <% @cards.each do |card| %>
     <tr>
 	  <td><%= link_to card.id, card_path(card) %></td>
 	  <td><%= card.question %></td>
 	  <td><%= card.answer %></td>
+    <td><%= card.author.email %></td>
     </tr>
   <% end %>
 </table>
