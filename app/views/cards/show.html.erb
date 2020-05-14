@@ -1,7 +1,7 @@
 <h1>Card #<%= @card.id %></h1>
-<p>question: <%= @card.question %></p>
-<p>answer: <%= @card.answer %></p>
-<p>author: <%= @card.author.email %>
+ <p>question: <%= markdown(@card.question) %></p>
+ <p>answer: <%= markdown(@card.answer) %></p>
+ <p>author: <%= @card.author.email %>
 <br>
 <br>
 <%= link_to 'All Cards', cards_path %>

@@ -11,9 +11,9 @@
   <% @cards.each do |card| %>
     <tr>
 	  <td><%= link_to card.id, card_path(card) %></td>
-	  <td><%= card.question %></td>
-	  <td><%= card.answer %></td>
-    <td><%= card.author.email %></td>
+	   <td><%= markdown(card.question) %></td>
+	   <td><%= markdown(card.answer) %></td>
+     <td><%= card.author.email %></td>
     </tr>
   <% end %>
 </table>
