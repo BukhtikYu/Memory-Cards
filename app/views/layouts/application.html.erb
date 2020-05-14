@@ -6,16 +6,23 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "materialize_alert" %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-
   <body>
     <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
+    <div class="materialert info">
+        <div class="material-icons">info_outline</div>
+        <%= notice %>
+    </div>
     <% end %>
+    
     <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
+     <div class="materialert error">
+        <div class="material-icons">error_outline</div>
+        <%= alert %>
+    </div>
     <% end %>
 
     <%= render '/layouts/headers/navbar' %>

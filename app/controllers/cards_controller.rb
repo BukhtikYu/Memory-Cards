@@ -11,7 +11,7 @@ class CardsController < ApplicationController
     @card = Card.new(card_params)
     @card.user_id = current_user.id
     if @card.save
-      redirect_to @card
+      redirect_to @card, notice: 'Card was succsesfully created'
     else
       render 'new'
     end
@@ -32,7 +32,7 @@ class CardsController < ApplicationController
   def update
     @card = Card.find(params[:id])
     if @card.update(card_params)
-      redirect_to @card
+      redirect_to @card, notice: 'Card was succsesfully updated'
     else
       render 'edit'
     end
@@ -41,7 +41,7 @@ class CardsController < ApplicationController
   def destroy
     @card = Card.find(params[:id])
     @card.destroy
-    redirect_to cards_path
+    redirect_to cards_path, notice: 'Card was succsesfully deleted'
   end
 
   private
