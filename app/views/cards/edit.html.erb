@@ -1,6 +1,6 @@
-<h1>Edit Card # <%= @card.id %></h1>
+<h2>Edit Card # <%= @card.id %></h2>
 <br>
-<%= form_with(model: @card, local: true) do |form| %>
+<%= form_with(model: [@board, @card], local: true) do |form| %>
   <%= form.label :question %>
   <%= form.text_area :question, class: "input h-64" %>
   <br>
@@ -12,4 +12,4 @@
   <%= form.submit %>
 <% end %>
 <br>
-<%= link_to 'All Cards', cards_path %>
+<%= link_to "Back to card", board_card_path(@board, @card) %>

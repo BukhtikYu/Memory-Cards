@@ -1,0 +1,15 @@
+<h2>New Board</h2>
+<%= form_with(model: @board, local: true) do |form| %>
+  <table>
+    <tr>
+      <td>name:</td>
+      <td><%= form.text_area :name, class: "input h-64" %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><%= form.submit "Create board" %></td>
+    </tr>
+  </table>
+<% end %>
+<br>
+<%= link_to 'All boards', boards_path %>

@@ -1,6 +1,8 @@
-<h1>Cards</h1>
+<h2><%= @board.name %></h2>
+<%= link_to 'All boards', boards_path %>
 <br>
-<%= link_to 'New Card', cards_new_path %>
+<br>
+<%= link_to 'New card', board_cards_new_path %>
 <br>
 <br>
 <table>
@@ -10,10 +12,13 @@
   <th>Author</th>
   <% @cards.each do |card| %>
     <tr>
-	  <td><%= link_to card.id, card_path(card) %></td>
-	   <td><%= raw rouge_markdown(card.question) %></td>
-	   <td><%= raw rouge_markdown(card.answer) %></td>
-     <td><%= card.author.email %></td>
+      <td><%= link_to card.id, board_card_path(@board, card) %></td>
+      <td><%= raw rouge_markdown(card.question) %></td>
+      <td><%= raw rouge_markdown(card.answer) %></td>
+      <td><%= card.author.email %></td>
+      <td><%= link_to 'Edit', board_cards_edit_path(@board, card) %> 
+        | <%= link_to 'Destroy', board_cards_edit_path(@board, card), method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
     </tr>
   <% end %>
 </table>

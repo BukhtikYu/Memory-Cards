@@ -1,0 +1,11 @@
+<h2>Edit board "<%= @board.name %>"</h2>
+<br>
+<%= form_with(model: @board, local: true) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <br>
+  <%= form.submit %>
+<% end %>
+<br>
+<%= link_to 'All boards', boards_path %>
