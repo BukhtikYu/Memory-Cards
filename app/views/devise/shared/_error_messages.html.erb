@@ -1,14 +1,17 @@
 <% if resource.errors.any? %>
   <div id="error_explanation">
-    <h2>
-      <%= I18n.t("errors.messages.not_saved",
+        <div class="materialert warning">
+            <div class="material-icons">warning</div>
+            <%= I18n.t("errors.messages.not_saved",
                  count: resource.errors.count,
-                 resource: resource.class.model_name.human.downcase)
-       %>
-    </h2>
+                       resource: resource.class.model_name.human.downcase) %>
+         </div>
     <ul>
       <% resource.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li class="materialert error">
+            <div class="material-icons">info_outline</div>
+            <%= message %>
+        </li>
       <% end %>
     </ul>
   </div>
