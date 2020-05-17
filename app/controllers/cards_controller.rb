@@ -2,7 +2,7 @@
 
 class CardsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def new
     @card = Card.new
   end
@@ -49,5 +49,4 @@ class CardsController < ApplicationController
   def card_params
     params.require(:card).permit(:question, :answer)
   end
-
 end

@@ -2,11 +2,11 @@
 <br>
 <%= form_with(model: @card, local: true) do |form| %>
   <%= form.label :question %>
-  <%= form.text_field :question %>
+  <%= form.text_area :question, class: "input h-64" %>
   <br>
   <br>
   <%= form.label :answer %>
-  <%= form.text_field :answer %>
+  <%= form.text_area :answer, class: "input h-64" %>
   <br>
   <br>
   <%= form.submit %>

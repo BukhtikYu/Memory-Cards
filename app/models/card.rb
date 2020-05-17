@@ -7,5 +7,4 @@ class Card < ApplicationRecord
   def author
     user
   end
-  
 end

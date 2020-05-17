@@ -1,6 +1,6 @@
 <h1>Card #<%= @card.id %></h1>
- <p>question: <%= markdown(@card.question) %></p>
- <p>answer: <%= markdown(@card.answer) %></p>
+ <p>question: <%= raw rouge_markdown(@card.question) %></p>
+ <p>answer: <%= raw rouge_markdown(@card.answer) %></p>
  <p>author: <%= @card.author.email %>
 <br>
 <br>

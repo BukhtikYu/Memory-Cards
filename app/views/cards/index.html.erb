@@ -11,8 +11,8 @@
   <% @cards.each do |card| %>
     <tr>
 	  <td><%= link_to card.id, card_path(card) %></td>
-	   <td><%= markdown(card.question) %></td>
-	   <td><%= markdown(card.answer) %></td>
+	   <td><%= raw rouge_markdown(card.question) %></td>
+	   <td><%= raw rouge_markdown(card.answer) %></td>
      <td><%= card.author.email %></td>
     </tr>
   <% end %>
