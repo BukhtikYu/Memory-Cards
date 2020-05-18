@@ -1,14 +1,14 @@
-<h2>Card #<%= @card.id %></h2>
-<h5>Board: <%= link_to "#{@board.name}", board_cards_path(@board) %></h5>
+<h2><%= "#{t('.card')} # #{@card.id}" %></h2>
+<h5><%= t'.board' %>: <%= link_to "#{@board.name}", board_cards_path(@board) %></h5>
 <br>
 <br>
-<h5>Question:</h5>
-<p><%= raw rouge_markdown(@card.question) %></p>
-<h5>Answer:</h5>
+<h5><%= t'.question' %> </h5>
+<p> <%= raw rouge_markdown(@card.question) %></p>
+<h5><%= t'.answer' %> </h5>
 <p><%= raw rouge_markdown(@card.answer) %></p>
 <br>
-<%= link_to 'Edit Card', board_cards_edit_path(@board, @card) %>
+<%= link_to t('.edit_card'),  board_cards_edit_path(@board, @card) %>
 <br>
-<%= link_to 'Destroy', board_card_path(@board, @card), method: :delete,
+<%= link_to t('.destroy'), board_card_path(@board, @card), method: :delete,
 data: { confirm: 'Are you sure?' } %>
 <p><i>author: <%= @card.author.email %></i></p>

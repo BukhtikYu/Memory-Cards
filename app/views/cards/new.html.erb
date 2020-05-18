@@ -1,17 +1,17 @@
-<h2>New Card</h2>
+<h2><%= t'.new_card' %></h2>
 <%= form_with(model: [@board, @card], local: true) do |form| %>
   <table>
     <tr>
-      <td>question:</td>
+      <td><%= t'.question' %>:</td>
       <td><%= form.text_area :question, class: "input h-64" %></td>
     </tr>
     <tr>
-      <td>answer:</td>
+      <td><%= t'.answer' %>:</td>
       <td><%= form.text_area :answer, class: "input h-64" %></td>
     </tr>
     <tr>
       <td></td>
-      <td><%= form.submit "Create card" %></td>
+      <td><%= form.submit t('.create') %></td>
     </tr>
   </table>
 <% end %>

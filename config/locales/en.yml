@@ -30,4 +30,83 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  static_pages:
+    home:
+      boards: "BOARDS"
+      future: "In a future, this page will contain some another information"
+      hello: "Hello world"
+      welcome: "Welcome!"
+  layouts:
+    headers:
+      navbar:
+        logo: "LOGO"
+      header_signed_in:
+        edit: "Edit profile"
+        logged: "Logged in as"
+        logout: "Logout"
+      header_not_signed_in:
+        sign_up: "Sign up"
+        login: "Log in"
+  devise:
+    registrations:
+      new:
+        sign: "Sign up"
+        char: "characters minimum"
+    sessions:
+      new:
+        login: "Log in"
+    passwords:
+      new:
+        forgot: "Forgot your password?"
+        reset: "Reset account password"
+    shared:
+      links:
+        forgot: "Forgot your password?"
+        login: "Log in"
+        sign_up: "Sign up"
+  cards:
+      new:
+        new_card: "New card"
+        question: "question"
+        answer: "answer"
+        create: "Create card"
+        all_cards: "All cards"
+      index:
+        cards: "Cards"
+        new_card: "New card"
+        question: "Question"
+        answer: "Answer"
+        author: "Author"
+        all_boards: "All boards"
+        edit: "Edit"
+        destroy: "Destroy"
+      show:
+        card: "Card"
+        question: "Question"
+        answer: "Answer"
+        author: "Author"
+        all_cards: "All Cards"
+        edit_card: "Edit Card"
+        destroy: "Destroy"
+        board: "Board"
+      edit:
+        edit_card: "Edit Card"
+        all_cards: "All cards"
+        submit: "Update card"
+        back: "Back to card"
+  boards:
+      index:
+        boards: "Boards"
+        new_board: "New Board"
+        name: "Name"
+        user: "User"
+        edit: "Edit"
+        destroy: "Destroy"
+      new:
+        new_board: "New Board"
+        name: "Name"
+        create_bord: "Create board"
+        all_boards: "All boards"
+      edit:
+        edit_board: "Edit board"
+        all_boards: "All boards"

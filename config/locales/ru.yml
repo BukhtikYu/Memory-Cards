@@ -1,0 +1,81 @@
+ru:
+  static_pages:
+    home:
+      boards: "БОРД"
+      future: "В будущем эта страница будет содержать другую информацию"
+      hello: "Привет, мир!"
+      welcome: "Добро пожаловать!"
+  layouts:
+    headers:
+      navbar:
+        logo: "ЛОГОТИП"
+      header_signed_in:
+        edit: "Редактировать профиль"
+        logged: "Зарегистрирован как"
+        logout: "Выйти"
+      header_not_signed_in:
+        sign_up: "Регистрация"
+        login: "Войти"
+  devise:
+    registrations:
+      new:
+        sign: "Регистрация"
+        char: "символов минимум"
+    sessions:
+      new:
+        login: "Войти"
+    passwords:
+      new:
+        forgot: "Забыли пароль?"
+        reset: "Сбросить пароль"
+    shared:
+      links:
+        forgot: "Забыли пароль?"
+        login: "Войти"
+        sign_up: "Регистрация"
+  cards:
+      new:
+        new_card: "Новая карточка"
+        question: "вопрос"
+        answer: "ответ"
+        create: "Создать карточку"
+        all_cards: "Все карточки"
+      index:
+        cards: "Карточки"
+        new_card: "Новая карточка"
+        question: "Вопрос"
+        answer: "Ответ"
+        author: "Автор"
+        all_boards: "Все борды"
+        edit: "Редактировать"
+        destroy: "Удалить"
+      show:
+        card: "Kарточкa"
+        question: "Вопрос"
+        answer: "Ответ"
+        author: "Автор"
+        all_cards: "Все карточки"
+        edit_card: "Редактировать карточку"
+        destroy: "Удалить карточку"
+        board: "Борд"
+      edit:
+        edit_card: "Редактировать карточку"
+        all_cards: "Все карточки"
+        submit: "Сохранить карточку"
+        back: "Назад к карточкам"
+  boards:
+      index:
+        boards: "Борды"
+        new_board: "Новый борд"
+        name: "Имя"
+        user: "Пользователь"
+        edit: "Редактировать"
+        destroy: "Удалить"
+      new:
+        new_board: "Новый борд"
+        name: "Имя"
+        submit: "Создать борд"
+        all_boards: "Все борды"
+      edit:
+        edit_board: "Редактировать борд"
+        all_boards: "Все борды"

@@ -1,15 +1,15 @@
-<h2>New Board</h2>
+<h2><%= t'.new_board' %></h2>
 <%= form_with(model: @board, local: true) do |form| %>
   <table>
     <tr>
-      <td>name:</td>
+      <td><%= t '.name' %>:</td>
       <td><%= form.text_area :name, class: "input h-64" %></td>
     </tr>
     <tr>
       <td></td>
-      <td><%= form.submit "Create board" %></td>
+      <td><%= form.submit t('.submit') %></td>
     </tr>
   </table>
 <% end %>
 <br>
-<%= link_to 'All boards', boards_path %>
+<%= link_to t('.all_boards'), boards_path %>
