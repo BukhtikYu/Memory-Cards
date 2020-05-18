@@ -36,6 +36,10 @@ en:
       future: "In a future, this page will contain some another information"
       hello: "Hello world"
       welcome: "Welcome!"
+    not_found:
+      oops: "Oops!" 
+      no_page: "The page which you're looking for doesn't exist."
+      root_button: "MAIN PAGE"
   layouts:
     headers:
       navbar:
@@ -112,6 +116,7 @@ en:
         name: "Name"
         create_bord: "Create board"
         all_boards: "All boards"
+        submit: "Submit"
       edit:
         edit_board: "Edit board"
         all_boards: "All boards"

@@ -13,5 +13,6 @@ Rails.application.routes.draw do
       patch 'cards/:id'=> 'cards#update'
       delete 'cards/:id' => 'cards#destroy'
     end
+    get '*unmatched' => 'static_pages#not_found'
   end
 end
