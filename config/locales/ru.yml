@@ -63,6 +63,10 @@ ru:
         all_cards: "Все карточки"
         submit: "Сохранить карточку"
         back: "Назад к карточкам"
+      form:
+        submit: "Подтвердить"
+        question: "Вопрос"
+        answer: "Ответ"
   boards:
       index:
         boards: "Борды"

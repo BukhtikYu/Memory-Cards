@@ -1,19 +1,10 @@
 <h2><%= t'.new_card' %></h2>
-<%= form_with(model: [@board, @card], local: true) do |form| %>
-  <table>
-    <tr>
-      <td><%= t'.question' %>:</td>
-      <td><%= form.text_area :question, class: "input h-64" %></td>
-    </tr>
-    <tr>
-      <td><%= t'.answer' %>:</td>
-      <td><%= form.text_area :answer, class: "input h-64" %></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><%= form.submit t('.create') %></td>
-    </tr>
-  </table>
-<% end %>
-<br>
-<%= link_to "#{@board.name}", board_cards_path(@board) %>
+
+<%= render '/cards/form' %>
+
+<div class="row">
+  <div class="input-field col s12">
+    <%= link_to "#{@board.name}", board_cards_path(@board),class: "btn blue waves-effect waves-light left" %>
+  </div>
+</div>
+

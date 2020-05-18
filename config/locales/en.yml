@@ -94,6 +94,11 @@ en:
         all_cards: "All cards"
         submit: "Update card"
         back: "Back to card"
+      form:
+        submit: "Submit"
+        question: "Question"
+        answer: "Answer"
+
   boards:
       index:
         boards: "Boards"

@@ -1,15 +1,10 @@
 <h1><%= "#{t('.edit_card')} # #{@card.id}" %></h1>
-<br>
-<%= form_with(model: [@board, @card], local: true) do |form| %>
-  <%= form.label :question %>
-  <%= form.text_area :question, class: "input h-64" %>
-  <br>
-  <br>
-  <%= form.label :answer %>
-  <%= form.text_area :answer, class: "input h-64" %>
-  <br>
-  <br>
-  <%= form.submit t('.submit') %>
-<% end %>
-<br>
-<%= link_to t('.back'), board_card_path(@board, @card) %>
+
+<%= render '/cards/form' %>
+
+<div class="row">
+  <div class="input-field col s12">
+    <%= link_to t('.back'), board_card_path(@board, @card), class: "btn blue waves-effect waves-light left" %>
+  </div>
+</div>
+

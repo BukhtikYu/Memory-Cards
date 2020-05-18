@@ -1,0 +1,20 @@
+<%= form_with(model: [@board, @card], local: true) do |form| %>
+  <div class="row">
+    <div class="input-field col s6">
+      <label for="textarea1"><%= t'.question' %>:</label>
+      <%= form.text_area :question, class: "materialize-textarea" %>
+    </div>
+    <div class="input-field col s6">
+      <label for="textarea1"><%= t'.answer' %>:</label>
+      <%= form.text_area :answer, class: "materialize-textarea" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <div class="actions">
+        <%= form.submit t('.submit'), class: "btn orange waves-effect waves-light left" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
