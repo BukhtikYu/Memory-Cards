@@ -4,6 +4,7 @@ class CardsController < ApplicationController
   before_action :authenticate_user!
   before_action :get_board
   before_action :set_card, only: [:show, :edit, :update, :destroy]
+  rescue_from ActiveRecord::RecordNotFound, with: :invalid_card
 
   def new
     @card = @board.cards.build
@@ -49,10 +50,24 @@ class CardsController < ApplicationController
   end
 
   def get_board
-    @board = Board.find(params[:board_id])
+    board = Board.find(params[:board_id])
+    if board.user == current_user
+      @board = board
+    else 
+      no_access_board
+    end
   end
 
   def set_card
     @card = @board.cards.find(params[:id])
   end
+
+  def invalid_card
+    redirect_to boards_path, alert: 'Invalid card'
+  end
+
+  def no_access_board
+    redirect_to boards_path, alert: 'No access'
+  end
+  
 end

@@ -3,7 +3,8 @@
 class BoardsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_board, only: [:show, :edit, :update, :destroy]
-
+  rescue_from ActiveRecord::RecordNotFound, with: :invalid_board
+  
   def new
     @board = Board.new
   end
@@ -22,7 +23,7 @@ class BoardsController < ApplicationController
   end
 
   def index
-    @boards = Board.all.sort_by(&:id)
+    @boards = Board.all.where(user: current_user).sort_by(&:id)
   end
 
   def edit
@@ -48,6 +49,19 @@ class BoardsController < ApplicationController
   end
 
   def set_board
-    @board = Board.find(params[:id])
+    board = Board.find(params[:id])
+    if board.user == current_user
+    	@board = board
+    else 
+    	no_access_board
+    end
+  end
+
+  def invalid_board
+    redirect_to boards_path, alert: 'Invalid board'
+  end
+
+  def no_access_board
+    redirect_to boards_path, alert: 'No access'
   end
 end
