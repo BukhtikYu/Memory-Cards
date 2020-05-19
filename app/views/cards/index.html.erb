@@ -1,8 +1,8 @@
 <h2><%= @board.name %></h2>
-<%= link_to t('.all_boards'), boards_path %>
+<%= link_to t('.all_boards'), boards_path, class: "btn blue waves-effect waves-light left" %>
 <br>
 <br>
-<%= link_to t('.new_card'), board_cards_new_path %>
+<%= link_to t('.new_card'), board_cards_new_path, class: "btn blue waves-effect waves-light left" %>
 <br>
 <br>
 <table>

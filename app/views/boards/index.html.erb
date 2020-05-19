@@ -1,17 +1,20 @@
 <h2><%= t'.boards' %></h2>
-<br>
-<%= link_to t('.new_board'), new_board_path %>
-<br>
-<br>
-<table>
-  <th><%= t'.name' %></th>
-  <th> </th>
-  <% @boards.each do |board| %>
-    <tr>
-      <td><%= link_to board.name, board_cards_path(board.id) %><br>
-        <%= link_to t('.edit'), edit_board_path(board) %> | <%= link_to t('.destroy'), board, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </td>
-      <td></td>
-    </tr>
-  <% end %>
+
+<div class="row">
+<%= link_to t('.new_board'), new_board_path, class: "btn blue waves-effect waves-light left" %>
+</div>
+
+<table class="highlight">
+  <thead>
+  </thead>
+  <tbody>
+    <% @boards.each do |board| %>
+      <tr>
+        <td><%= link_to board.name, board_cards_path(board.id), class: "btn blue waves-effect waves-light left" %></td>
+        <td><%= link_to t('.edit'), edit_board_path(board), class: "waves-effect waves-light btn-small" %></td>
+        <td><%= link_to t('.destroy'), board, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn red waves-effect waves-light btn-small" %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
+
