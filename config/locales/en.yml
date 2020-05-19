@@ -37,7 +37,7 @@ en:
       hello: "Hello world"
       welcome: "Welcome!"
     not_found:
-      oops: "Oops!" 
+      oops: "Oops!"
       no_page: "The page which you're looking for doesn't exist."
       root_button: "MAIN PAGE"
   layouts:
@@ -93,6 +93,8 @@ en:
         edit_card: "Edit Card"
         destroy: "Destroy"
         board: "Board"
+        update: "UPDATE"
+        show: "SHOW ANSWER"
       edit:
         edit_card: "Edit Card"
         all_cards: "All cards"

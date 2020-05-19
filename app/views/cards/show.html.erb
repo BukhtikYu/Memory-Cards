@@ -12,7 +12,7 @@
     <p><%= raw rouge_markdown(@card.answer) %></p>
   </div>
   <div class="input-field col s12">
-    <button class="activator btn waves-effect waves-light">Show Answer</button>
+    <button class="activator btn waves-effect waves-light"><%= t'.show' %></button>
   </div>
 </div>
 
@@ -27,4 +27,3 @@
 </div>
 
 <p><i>author: <%= @card.author.email %></i></p>
-
