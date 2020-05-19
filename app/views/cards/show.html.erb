@@ -3,13 +3,11 @@
     <span class="card-title"><%= "#{t('.card')} # #{@card.id}" %></span>
     <h5><%= t'.board' %>: <%= link_to "#{@board.name}", board_cards_path(@board) %></h5>
     <br>
-    <h3><%= t'.question' %> </h3>
-    <p> <%= raw rouge_markdown(@card.question) %></p>
+    <h3> <%= raw rouge_markdown(@card.question) %></h3>
   </div>
   <div class="card-reveal">
     <span class="card-title grey-text text-darken-4"><%= "#{t('.card')} # #{@card.id}" %><i class="material-icons right">close</i></span>
-    <h5><%= t'.answer' %> </h5>
-    <p><%= raw rouge_markdown(@card.answer) %></p>
+    <h3><%= raw rouge_markdown(@card.answer) %></h3>
   </div>
   <div class="input-field col s12">
     <button class="activator btn waves-effect waves-light"><%= t'.show' %></button>
@@ -25,5 +23,3 @@
                 data: { confirm: 'Are you sure?' }, class: "btn blue waves-effect waves-light left" %>
   </div>
 </div>
-
-<p><i>author: <%= @card.author.email %></i></p>

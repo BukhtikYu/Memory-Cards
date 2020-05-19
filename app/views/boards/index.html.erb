@@ -5,14 +5,12 @@
 <br>
 <table>
   <th><%= t'.name' %></th>
-  <th><%= t'.user' %></th>
   <th> </th>
   <% @boards.each do |board| %>
     <tr>
       <td><%= link_to board.name, board_cards_path(board.id) %><br>
         <%= link_to t('.edit'), edit_board_path(board) %> | <%= link_to t('.destroy'), board, method: :delete, data: { confirm: 'Are you sure?' } %>
       </td>
-      <td><%= board.user.email %></td>
       <td></td>
     </tr>
   <% end %>
