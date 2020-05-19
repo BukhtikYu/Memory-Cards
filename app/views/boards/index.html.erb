@@ -10,9 +10,9 @@
   <tbody>
     <% @boards.each do |board| %>
       <tr>
-        <td><%= link_to board.name, board_cards_path(board.id), class: "btn blue waves-effect waves-light left" %></td>
-        <td><%= link_to t('.edit'), edit_board_path(board), class: "waves-effect waves-light btn-small" %></td>
-        <td><%= link_to t('.destroy'), board, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn red waves-effect waves-light btn-small" %></td>
+        <td><%= link_to board.name, board_cards_path(board.id), class: "waves-effect waves-teal btn-flat" %></td>
+        <td style = "text-align: right"><%= link_to t('.edit'), edit_board_path(board), class: "waves-effect waves-light btn-small" %>
+          <%= link_to t('.destroy'), board, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn red waves-effect waves-light btn-small" %></td>
       </tr>
     <% end %>
   </tbody>

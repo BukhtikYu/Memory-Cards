@@ -2,21 +2,17 @@
 <%= link_to t('.all_boards'), boards_path, class: "btn blue waves-effect waves-light left" %>
 <br>
 <br>
+<br>
 <%= link_to t('.new_card'), board_cards_new_path, class: "btn blue waves-effect waves-light left" %>
 <br>
 <br>
-<table>
-  <th>ID</th>
-  <th><%= t'.question' %></th>
-  <th><%= t'.answer' %></th>
+<br>
+<table class="highlight">
   <% @cards.each do |card| %>
     <tr>
-      <td><%= link_to card.id, board_card_path(@board, card) %></td>
-      <td><%= raw rouge_markdown(card.question) %></td>
-      <td><%= raw rouge_markdown(card.answer) %></td>
-      <td><%= link_to t('.edit'), board_cards_edit_path(@board, card) %>
-        | <%= link_to t('.destroy'), board_cards_edit_path(@board, card), method: :delete, data: { confirm: 'Are you sure?' } %>
-      </td>
+      <td><%= link_to card.question, board_card_path(@board, card), class: "waves-effect waves-teal btn-flat" %></td>
+      <td style = "text-align: right"><%= link_to t('.edit'), board_cards_edit_path(@board, card), class: "waves-effect waves-light btn-small" %>
+         <%= link_to t('.destroy'), board_cards_edit_path(@board, card), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn red waves-effect waves-light btn-small" %></td>
     </tr>
   <% end %>
 </table>
