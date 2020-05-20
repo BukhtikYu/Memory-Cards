@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
+    resource :password, only: [:edit], module: :users do
+      collection do
+        patch 'update_password'
+      end
+    end
     devise_for :users
     root 'static_pages#home'
     resources :boards do
