@@ -1,16 +1,20 @@
-<nav>
-  <div class="nav-wrapper">
-        <a href="/" class="brand-logo"><%= t '.logo' %></a>
-    <ul id="locale" class="right hide-on-med-and-down">
+<div id="nav">
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo"><%= t '.logo' %></a>
+      <ul id="locale" class="right hide-on-med-and-down">
         <li><%= link_to 'En', url_for(locale: :en) %></li>
         <li><%= link_to 'Ru', url_for(locale: :ru) %></li>
-    </ul>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      </ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
       <% if user_signed_in? %>
         <%= render '/layouts/headers/header_signed_in' %>
       <% else %>
         <%= render '/layouts/headers/header_not_signed_in' %>
       <% end %>
-    </ul>
-  </div>
-</nav>
+      </ul>
+    </div>
+  </nav>
+</div>
+</div>
