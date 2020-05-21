@@ -14,7 +14,7 @@ class User < ApplicationRecord
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
-      user.email = auth.info.email
+      user.email = auth.info.email || "#{auth.info.nickname}@gmail.com"
       user.token = auth.credentials.token
       user.expires = auth.credentials.expires
       user.expires_at = auth.credentials.expires_at
