@@ -19,6 +19,9 @@ Rails.application.routes.draw do
       get 'cards/:id/edit' => 'cards#edit', as: 'cards_edit'
       patch 'cards/:id'=> 'cards#update'
       delete 'cards/:id' => 'cards#destroy'
+      member do
+        get 'learning'
+      end
     end
     get '*unmatched' => 'static_pages#not_found'
   end

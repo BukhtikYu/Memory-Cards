@@ -2,7 +2,7 @@
 
 class BoardsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_board, only: [:show, :edit, :update, :destroy]
+  before_action :set_board, only: [:show, :edit, :update, :destroy, :learning]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_board
 
   def new
@@ -31,7 +31,7 @@ class BoardsController < ApplicationController
 
   def update
     if @board.update(board_params)
-      redirect_to @board, notice: 'Board was succsesfully updated'
+      redirect_to boards_path, notice: 'Board was succsesfully updated'
     else
       render 'edit'
     end
@@ -40,6 +40,10 @@ class BoardsController < ApplicationController
   def destroy
     @board.destroy
     redirect_to boards_path, notice: 'Board was succsesfully deleted'
+  end
+
+  def learning
+    @cards = @board.cards.sort_by(&:id)
   end
 
   private

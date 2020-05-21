@@ -1,0 +1,26 @@
+<%= stylesheet_link_tag "boards" %>
+<h2><%= @board.name %></h2>
+<br>
+<%= link_to 'All boards', boards_path, class: "btn blue waves-effect waves-light left" %>
+<br>
+<br>
+<div class = "carousel">
+  <% @cards.each do |card| %>
+    <div class = 'carousel-item'>
+      <div class="card blue-grey darken-1 center-align">
+        <div class="card-content white-text">
+          <h4><%= raw rouge_markdown(card.question) %></h4>
+        </div>
+        <div class="input-field col s12">
+          <button class="activator btn waves-effect waves-light">SHOW</button>
+        </div>
+        <div class="row">
+        </div>
+        <div class="card-reveal black-text center-align">
+          <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+          <%= raw rouge_markdown(card.answer) %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

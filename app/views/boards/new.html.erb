@@ -7,7 +7,7 @@
     </tr>
     <tr>
       <td></td>
-      <td><%= form.submit t('.submit'), class: "btn blue waves-effect waves-light left" %></td>
+      <td><%= form.submit t('.submit'), data: { disable_with: "Saving..." }, class: "btn blue waves-effect waves-light left" %></td>
     </tr>
   </table>
 <% end %>

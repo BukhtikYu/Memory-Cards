@@ -11,7 +11,11 @@ require("channels")
 import '../stylesheets/application'
 import 'materialize-css/dist/js/materialize'
 
-
+document.addEventListener('turbolinks:load', function() {
+  var elems = document.querySelectorAll('.carousel');
+  var instances = M.Carousel.init(elems, {
+  });
+});
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

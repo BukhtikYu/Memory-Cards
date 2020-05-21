@@ -7,6 +7,10 @@
 <br>
 <br>
 <br>
+<%= link_to 'Learning board', learning_board_path(@board), class: "btn orange waves-effect waves-light left" %>
+<br>
+<br>
+<br>
 
 <%-# This is a button "Ask me!" with modal -%>
 <button class = "btn blue-grey modal-trigger" data-target="cards" >Ask me!</button>
@@ -68,5 +72,3 @@
         M.Modal.init(box, {})
     });
 </script>
-
-
