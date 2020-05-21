@@ -53,7 +53,7 @@ class CardsController < ApplicationController
     board = Board.find(params[:board_id])
     if board.user == current_user
       @board = board
-    else 
+    else
       no_access_board
     end
   end
@@ -69,5 +69,4 @@ class CardsController < ApplicationController
   def no_access_board
     redirect_to boards_path, alert: 'No access'
   end
-  
 end

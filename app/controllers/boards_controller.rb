@@ -4,7 +4,7 @@ class BoardsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_board, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_board
-  
+
   def new
     @board = Board.new
   end
@@ -51,9 +51,9 @@ class BoardsController < ApplicationController
   def set_board
     board = Board.find(params[:id])
     if board.user == current_user
-    	@board = board
-    else 
-    	no_access_board
+      @board = board
+    else
+      no_access_board
     end
   end
 
