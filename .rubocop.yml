@@ -13,6 +13,10 @@ AllCops:
     - 'lib/tasks/**/*'
     - 'node_modules/**/*'
     - 'vendor/**/*'
+    
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/models/*.rb'
 
 Style/ClassAndModuleChildren:
   Enabled: false

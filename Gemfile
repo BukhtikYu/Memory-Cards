@@ -49,6 +49,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'shoulda'
+  gem 'shoulda-matchers'
 end
 
 group :development do

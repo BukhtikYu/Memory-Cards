@@ -3,5 +3,46 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject(:user) do
+    described_class.new(email: 'sample@gmail.ru',
+                        password: 123_123)
+  end
+
+  it 'is valid with valid attributes' do
+    expect(user).to be_valid
+  end
+
+  describe 'Validations' do
+    it 'is valid with valid attributes' do
+      expect(user).to be_valid
+    end
+
+    it 'is not valid without a password' do
+      user.password = nil
+      expect(user).not_to be_valid
+    end
+
+    it 'is not valid without enough symbols' do
+      user.password = 123
+      expect(user).not_to be_valid
+    end
+
+    it 'is not valid with uncorrect form' do
+      user.email = 'asd'
+      expect(user).not_to be_valid
+    end
+
+    it 'is not valid without an email' do
+      user.email = nil
+      expect(user).not_to be_valid
+    end
+  end
+
+  describe 'Cards' do
+    it { is_expected.to have_many(:cards) }
+  end
+
+  describe 'Boards' do
+    it { is_expected.to have_many(:boards) }
+  end
 end
