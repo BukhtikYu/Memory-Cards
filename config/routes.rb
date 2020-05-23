@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/500', to: "errors#internal_error"
 
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+  root 'static_pages#home'
   devise_for :users, skip: :omniauth_callbacks
 
     resource :password, only: [:edit], module: :users do
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
         patch 'update_password'
       end
     end
-    root 'static_pages#home'
+    
     resources :boards do
 
       get 'cards/new' => 'cards#new'
@@ -23,9 +24,11 @@ Rails.application.routes.draw do
       get 'cards/:id/edit' => 'cards#edit', as: 'cards_edit'
       patch 'cards/:id'=> 'cards#update'
       delete 'cards/:id' => 'cards#destroy'
+      patch 'cards/:id/update_confidence' => 'cards#update_confidence', as: 'card_update_confidence'
       member do
         get 'learning'
       end
+
     end
   end
 end
