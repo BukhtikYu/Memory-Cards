@@ -2,9 +2,35 @@
 
 <%= render '/cards/form' %>
 
+<%-# This is a button "Ask me!" with modal -%>
+<div class="row">
+  <div class="input-field col s12">
+    <button class = "btn blue-grey modal-trigger" data-target="cards" >Ask me!</button>
+    <div class="modal" id="cards">
+      <div class="modal-content">
+        <h5>If you want to write on Ruby, just type
+      ```ruby  >>>>your code here<<<<<  ```
+        </h5>
+      </div>
+    <div class="modal-footer">
+      <button class="modal-close">Back</button>
+    </div>
+    </div>
+  </div>
+</div>
+
 <div class="row">
   <div class="input-field col s12">
     <%= link_to "<BACK TO BOARD", board_cards_path(@board),class: "btn blue waves-effect waves-light left" %>
   </div>
 </div>
+
+<%-# This is a script for the button "Ask me!" with modal -%>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const box = document.querySelector('.modal');
+        M.Modal.init(box, {})
+    });
+</script>
+
 
