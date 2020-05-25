@@ -7,14 +7,13 @@ Rails.application.routes.draw do
 
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   root 'static_pages#home'
-  devise_for :users, skip: :omniauth_callbacks
+  devise_for :users, skip: :omniauth_callbacks,  controllers: { registrations: 'registrations' }
 
     resource :password, only: [:edit], module: :users do
       collection do
         patch 'update_password'
       end
     end
-    
     resources :boards do
 
       get 'cards/new' => 'cards#new'
