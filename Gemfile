@@ -48,6 +48,8 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'capybara'
+  gem 'capybara-screenshot'
   gem 'shoulda'
   gem 'shoulda-matchers'
 end

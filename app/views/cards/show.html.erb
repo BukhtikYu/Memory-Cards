@@ -16,7 +16,7 @@
     <div style = 'display:inline-block'><%= button_to "2", board_card_update_confidence_path(@board, @card), method: :patch, params: { confidence_level: 'bad' }, class: 'btn red accent-2' %></div>
     <div style = 'display:inline-block'><%= button_to "3", board_card_update_confidence_path(@board, @card), method: :patch, params: { confidence_level: 'medium' }, class: 'btn amber' %></div>
     <div style = 'display:inline-block'><%= button_to "4", board_card_update_confidence_path(@board, @card), method: :patch, params: { confidence_level: 'good' }, class: 'btn blue-grey lighten-1' %></div>
-    <div style = 'display:inline-block'><%= button_to "4", board_card_update_confidence_path(@board, @card), method: :patch, params: { confidence_level: 'perfect' }, class: 'btn green darken-1' %></div>
+    <div style = 'display:inline-block'><%= button_to "5", board_card_update_confidence_path(@board, @card), method: :patch, params: { confidence_level: 'perfect' }, class: 'btn green darken-1' %></div>
     <p>Current level of confidence: <%= @card.confidence_level %></p>
     <br>
   </div>
