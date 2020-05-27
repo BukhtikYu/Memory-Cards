@@ -12,7 +12,7 @@ RSpec.describe 'Boards', type: :feature do
       fill_in 'user_password', with: user.password
       click_button('Log in')
     end
-  
+
     context 'when user created new board' do
       before do
         visit '/en/boards/new'

@@ -13,10 +13,15 @@ AllCops:
     - 'lib/tasks/**/*'
     - 'node_modules/**/*'
     - 'vendor/**/*'
-    
+
 Metrics/BlockLength:
   Exclude:
     - 'spec/models/*.rb'
+
+RSpec/MultipleExpectations:
+  Max: 2
+RSpec/ExampleLength:
+  Enabled: false
 
 Style/ClassAndModuleChildren:
   Enabled: false

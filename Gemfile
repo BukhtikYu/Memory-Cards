@@ -42,14 +42,14 @@ gem 'rubocop-rspec', require: false
 group :development, :test do
   # Cal 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'capybara'
+  gem 'capybara-screenshot'
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
-  gem 'capybara'
-  gem 'capybara-screenshot'
   gem 'shoulda'
   gem 'shoulda-matchers'
 end

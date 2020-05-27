@@ -18,5 +18,4 @@ class Card < ApplicationRecord
     good: 4,
     perfect: 5
   }
-  
 end
