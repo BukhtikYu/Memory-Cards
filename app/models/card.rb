@@ -3,12 +3,7 @@
 class Card < ApplicationRecord
   validates :question, presence: true
 
-  belongs_to :user
   belongs_to :board
-
-  def author
-    user
-  end
 
   enum confidence_level: {
     undefined: 0,

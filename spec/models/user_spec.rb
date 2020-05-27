@@ -31,10 +31,6 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe 'Cards' do
-    it { is_expected.to have_many(:cards) }
-  end
-
   describe 'Boards' do
     it { is_expected.to have_many(:boards) }
   end

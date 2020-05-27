@@ -8,7 +8,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:github, :google_oauth2]
-  has_many :cards, dependent: :destroy
   has_many :boards, dependent: :destroy
 
   # rubocop:disable Metrics/AbcSize
