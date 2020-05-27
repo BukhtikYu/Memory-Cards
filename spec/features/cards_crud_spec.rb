@@ -67,14 +67,6 @@ RSpec.describe 'Cards', type: :feature do
           click_link 'Destroy'
           expect(page).not_to have_text('testBoard')
         end
-
-        it 'updates confidence' do
-          visit '/en/boards'
-          click_link 'testBoard'
-          click_link 'Show'
-          click_button '3'
-          expect(page).to have_text('medium')
-        end
       end
     end
   end

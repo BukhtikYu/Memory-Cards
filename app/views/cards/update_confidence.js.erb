@@ -1,0 +1,2 @@
+document.getElementById('confidence').innerHTML = "";
+document.querySelector('#confidence').insertAdjacentHTML('afterbegin', '<%= escape_javascript(render "confidence", object: @card) %>');

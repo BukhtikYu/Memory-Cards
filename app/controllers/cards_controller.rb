@@ -44,8 +44,10 @@ class CardsController < ApplicationController
   end
 
   def update_confidence
-    if @card.update(params.permit(:confidence_level))
-      redirect_to board_card_path(@board, @card), notice: 'Card was succsesfully updated'
+    respond_to do |format|
+      if @card.update(params.permit(:confidence_level))
+        format.js
+      end
     end
   end
 
