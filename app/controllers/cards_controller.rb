@@ -44,9 +44,7 @@ class CardsController < ApplicationController
 
   def update_confidence
     respond_to do |format|
-      if @card.update(params.permit(:confidence_level))
-        format.js
-      end
+      format.js if @card.update(params.permit(:confidence_level))
     end
   end
 
