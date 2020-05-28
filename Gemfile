@@ -52,6 +52,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda'
   gem 'shoulda-matchers'
+  gem 'activeadmin'
 end
 
 group :development do
