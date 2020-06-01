@@ -10,6 +10,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:github, :google_oauth2]
   has_many :boards, dependent: :destroy
+  has_many :imports, dependent: :destroy
+
 
   # rubocop:disable Metrics/AbcSize
   def self.from_omniauth(auth)

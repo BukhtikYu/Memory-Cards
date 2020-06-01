@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+
   devise_for :users, only: :omniauth_callbacks, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
 
   get '/404', to: "errors#not_found"
@@ -36,5 +38,15 @@ Rails.application.routes.draw do
       end
 
     end
+
+    get 'imports/new' => 'imports#new'
+    post 'imports' => 'imports#create'
+    get 'imports' => 'imports#index'
+    patch 'imports/:id' => 'imports#update'
+    get 'imports/:id' => 'imports#show'
+    delete 'imports/:id' => 'imports#destroy'
+
+
+
   end
 end

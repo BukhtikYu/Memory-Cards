@@ -1,0 +1,22 @@
+<h1>All imports</h1>
+<br>
+<div class="row">
+  <a><%= link_to t('.New Import'), imports_new_path, class: "btn teal waves-effect waves-light" %></a>
+  <a><%= link_to t('.Back to Boards'), boards_path, class: "btn blue waves-effect waves-light" %></a>
+</div>
+<br>
+
+<br>
+<br>
+<table class="highlight">
+  <thead>
+  </thead>
+  <tbody>
+  <% @imports.each do |import| %>
+    <tr>
+      <td><%= import.file.filename %></td>
+      <td><%= link_to t('.download'), rails_blob_path(import.file, disposition: "attachment"), class: "btn teal waves-effect waves-light btn-small" %></td>
+  <% end %>
+  </tbody>
+</table>
+
