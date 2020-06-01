@@ -36,8 +36,8 @@ ru:
   cards:
       new:
         new_card: "Новая карточка"
-        question: "вопрос"
-        answer: "ответ"
+        question: "Вопрос"
+        answer: "Ответ"
         create: "Создать карточку"
         all_cards: "Все карточки"
       index:
@@ -46,7 +46,7 @@ ru:
         question: "Вопрос"
         answer: "Ответ"
         author: "Автор"
-        all_boards: "Все борды"
+        all_boards: "<Все борды"
         edit: "Редактировать"
         destroy: "Удалить"
       show:

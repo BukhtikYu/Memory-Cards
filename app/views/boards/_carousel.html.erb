@@ -1,0 +1,28 @@
+<div class = "carousel carousel-slider">
+  <% @cards.each do |card| %>
+    <div class = 'carousel-item'>
+      <div class="card blue-grey darken-1 center-align">
+        <div class="card-content white-text">
+          <h4 class="carousel-text"><%= raw rouge_markdown(card.question) %></h4>
+        </div>
+        <div class="input-field col s12">
+          <button class="activator btn waves-effect waves-light show">SHOW</button>
+        </div>
+        <div class="row">
+        </div>
+        <div class="card-reveal black-text center-align">
+           <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+           <h4 class="carousel-text"><%= raw rouge_markdown(card.answer) %></h4>
+           <p class = 'smaller'>How well did I know it?</p>
+           <div style = 'display:inline-block'><%= button_to "1", board_card_update_confidence_from_learning_path(@board, card), method: :patch, remote: true, params: { confidence_level: 'very_bad' }, class: 'btn red darken-2' %></div>
+           <div style = 'display:inline-block'><%= button_to "2", board_card_update_confidence_from_learning_path(@board, card), method: :patch, remote: true, params: { confidence_level: 'bad' }, class: 'btn red accent-2' %></div>
+           <div style = 'display:inline-block'><%= button_to "3", board_card_update_confidence_from_learning_path(@board, card), method: :patch, remote: true, params: { confidence_level: 'medium' }, class: 'btn amber' %></div>
+           <div style = 'display:inline-block'><%= button_to "4", board_card_update_confidence_from_learning_path(@board, card), method: :patch, remote: true, params: { confidence_level: 'good' }, class: 'btn blue-grey lighten-1' %></div>
+           <div style = 'display:inline-block'><%= button_to "5", board_card_update_confidence_from_learning_path(@board, card), method: :patch, remote: true, params: { confidence_level: 'perfect' }, class: 'btn green darken-1' %></div>
+           <%= render partial: 'confidence', locals: { card: card } %>
+           <br>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

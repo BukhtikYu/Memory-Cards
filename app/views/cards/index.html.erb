@@ -1,13 +1,14 @@
-<div class="row">
+<div class="row" style = "margin-top: 20px;">
+<a><%= link_to t('.all_boards').upcase, boards_path, style: "color: gray; font-size: large;" %></a>
   <div class="col s12">
     <h2><%= @board.name %></h2>
   </div>
 </div>
 
 <div class="row">
-  <a><%= link_to 'Learning board', learning_board_path(@board), class: "btn orange waves-effect waves-light" %></a>
-  <a><%= link_to t('.all_boards'), boards_path, class: "btn blue waves-effect waves-light" %></a>
-  <a><%= link_to t('.new_card'), board_cards_new_path, class: "btn teal lighten-2 waves-effect waves-light" %></a>
+  <a><%= link_to 'Learning', learning_board_path(@board), class: "btn orange waves-effect waves-light", style: "margin-right: 20px;" %></a>
+  <a><%= link_to 'Random', learning_random_board_path(@board), class: "btn orange darken-2 waves-effect waves-light", style: "margin-right: 20px;" %></a>
+  <a><%= link_to t('.new_card'), board_cards_new_path, class: "btn teal lighten-2 waves-effect waves-light", style: "margin-right: 20px;" %></a>
 </div>
 <div class = "row" style = "float: right; margin-right: 20px;">
   <a style = "font-size: medium; color: black;">SORT <%= link_to 'BETTER', mark_up_board_path(@board), remote: true, class: "btn grey waves-effect waves-light", style: "margin-left: 10px;"%></a>
