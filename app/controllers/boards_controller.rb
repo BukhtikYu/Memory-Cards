@@ -2,7 +2,7 @@
 
 class BoardsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_board, only: [:show, :edit, :update, :destroy, :learning]
+  before_action :set_board, only: [:show, :edit, :update, :destroy, :learning, :mark_down, :mark_up]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_board
 
   def new
@@ -46,6 +46,21 @@ class BoardsController < ApplicationController
     @cards = @board.cards.sort_by(&:id)
   end
 
+
+  def mark_down
+    @cards = @board.cards.sort_by(&:confidence_level_before_type_cast)
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def mark_up
+    @cards = @board.cards.sort_by(&:confidence_level_before_type_cast).reverse
+    respond_to do |format|
+      format.js
+    end
+  end
+  
   def update_confidence_from_learning
     @board = Board.find(params[:board_id])
     @card = Card.find(params[:id])

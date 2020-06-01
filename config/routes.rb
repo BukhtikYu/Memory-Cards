@@ -31,6 +31,8 @@ Rails.application.routes.draw do
       as: 'card_update_confidence_from_learning'
       member do
         get 'learning'
+        get 'mark_down'
+        get 'mark_up'
       end
 
     end
