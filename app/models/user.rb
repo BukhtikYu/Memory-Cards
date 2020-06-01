@@ -17,6 +17,7 @@ class User < ApplicationRecord
       user.provider = auth.provider
       user.uid = auth.uid
       user.email = auth.info.email || "#{auth.info.nickname}@gmail.com"
+      user.avatar_link = auth.info.image
       user.token = auth.credentials.token
       user.expires = auth.credentials.expires
       user.expires_at = auth.credentials.expires_at
