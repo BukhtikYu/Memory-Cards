@@ -1,0 +1,2 @@
+document.getElementById(<%= @card.id %>).innerHTML = "";
+document.getElementById(<%= @card.id %>).insertAdjacentHTML('afterbegin', '<%= escape_javascript(render partial: "confidence", object: @card, as: :card) %>');

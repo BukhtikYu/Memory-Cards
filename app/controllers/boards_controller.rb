@@ -46,6 +46,14 @@ class BoardsController < ApplicationController
     @cards = @board.cards.sort_by(&:id)
   end
 
+  def update_confidence_from_learning
+    @board = Board.find(params[:board_id])
+    @card = Card.find(params[:id])
+    respond_to do |format|
+      format.js if @card.update(params.permit(:confidence_level))
+    end
+  end
+
   private
 
   def board_params

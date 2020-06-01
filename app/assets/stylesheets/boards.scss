@@ -2,12 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
- .carousel {
-   	margin: 0 auto;
-   .carousel-item {
-    visibility: visible;
-    width: 50%;
+
+.carousel {
+    margin: 0 auto;
+    
+    .card {
     height: 100%;
     overflow: auto;
 }
+    .card-content {
+    min-height: 300px;
 }
+    .show {
+      font-size: 18px;
+      height: 42px;
+}
+    .card-reveal {
+      overflow: auto;
+      position: static;
+    }
+
+    .input-field {
+      left: 0;
+      right: 0;
+      position: relative;
+      bottom: 0px;
+}
+}
+.carousel.carousel-slider .carousel-item p {
+	font-size: 25px;
+}	
+.carousel.carousel-slider .carousel-item .smaller {
+	  font-size:18px;
+}
+

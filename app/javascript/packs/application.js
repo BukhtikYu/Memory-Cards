@@ -11,11 +11,17 @@ require("channels")
 import '../stylesheets/application'
 import 'materialize-css/dist/js/materialize'
 
-document.addEventListener ("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.carousel');
   var instances = M.Carousel.init(elems, {
-    numVisible:3,
-    dist: -120
+    fullWidth: true,
+  });
+});
+
+document.addEventListener('turbolinks:load', function() {
+  var elems = document.querySelectorAll('.carousel');
+  var instances = M.Carousel.init(elems, {
+    fullWidth: true,
   });
 });
 
