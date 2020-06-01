@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
+gem 'activeadmin'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'omniauth-google-oauth2'
@@ -41,7 +42,6 @@ gem 'rubocop-rspec', require: false
 
 group :development, :test do
   # Cal 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'activeadmin'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem "selenium-webdriver"
   gem 'capybara'
