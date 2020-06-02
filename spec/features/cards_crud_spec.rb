@@ -16,56 +16,59 @@ RSpec.describe 'Cards', type: :feature do
     context 'when user created new board' do
       before do
         visit '/en/boards/new'
-        fill_in id: 'board_name', with: 'testBoard'
+        fill_in id: 'board_name', with: 'TESTBOARD'
         click_button('Submit')
       end
 
       context 'when user created new card' do
         before do
           visit '/en/boards'
-          click_link 'testBoard'
+          click_link 'TESTBOARD'
           click_link 'New card'
-          fill_in id: 'card_question', with: 'testQuestion'
-          fill_in id: 'card_answer', with: 'testAnswer'
+          fill_in id: 'card_question', with: 'TESTQUESTION'
+          fill_in id: 'card_answer', with: 'TESTANSWER'
           click_button('Submit')
         end
 
         it 'adds one more card' do
           visit '/en/boards'
-          click_link 'testBoard'
+          click_link 'TESTBOARD'
           click_link 'New card'
-          fill_in id: 'card_question', with: 'secondTestQuestion'
-          fill_in id: 'card_answer', with: 'secondTestAnswer'
+          fill_in id: 'card_question', with: 'SECONDTESTQUESTION'
+          fill_in id: 'card_answer', with: 'SECONDTESTANSWER'
           click_button('Submit')
-          expect(page).to have_text('testQuestion')
-          expect(page).to have_text('testAnswer')
-          expect(page).to have_text('secondTestQuestion')
-          expect(page).to have_text('secondTestAnswer')
+          expect(page).to have_text('TESTQUESTION')
+          expect(page).to have_text('TESTANSWER')
+          expect(page).to have_text('SECONDTESTQUESTION')
+          expect(page).to have_text('SECONDTESTANSWER')
         end
 
         it 'opens card' do
           visit '/en/boards'
-          click_link 'testBoard'
+          click_link 'TESTBOARD'
           click_link 'Show'
-          expect(page).to have_text('testQuestion')
-          expect(page).to have_text('testAnswer')
+          expect(page).to have_text('TESTQUESTION')
+          click_button 'SHOW'
+          expect(page).to have_text('TESTANSWER')
         end
 
         it 'edits question and answer in card' do
           visit '/en/boards'
-          click_link 'testBoard'
+          click_link 'TESTBOARD'
           click_link 'Edit'
-          fill_in id: 'card_question', with: 'questionEdited'
-          fill_in id: 'card_answer', with: 'answerEdited'
+          fill_in id: 'card_question', with: 'QUESTIONEDITED'
+          fill_in id: 'card_answer', with: 'ANSWEREDITED'
           click_button('Submit')
-          expect(page).to have_text('questionEdited')
-          expect(page).to have_text('answerEdited')
+          expect(page).to have_text('QUESTIONEDITED')
+          click_button 'SHOW'
+          expect(page).to have_text('ANSWEREDITED')
         end
 
         it 'deletes card' do
           visit '/en/boards'
           click_link 'Destroy'
-          expect(page).not_to have_text('testBoard')
+          page.driver.browser.switch_to.alert.accept if Capybara.current_driver == :chrome
+          expect(page).not_to have_text('TESTBOARD')
         end
       end
     end

@@ -1,7 +1,7 @@
   <nav>
     <div class="nav-wrapper">
       <a href="/" class="brand-logo"><%= t '.logo' %></a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger" id="hamburger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <% if user_signed_in? %>
         <%= render '/layouts/headers/header_signed_in' %>
@@ -20,7 +20,7 @@
         <% else %>
         <%= render '/layouts/headers/header_not_signed_in' %>
       <% end %>
-    <li><%= link_to 'En', url_for(locale: :en) %></li>
-    <li><%= link_to 'Ru', url_for(locale: :ru) %></li>
+    <li><%= link_to 'Eng', url_for(locale: :en) %></li>
+    <li><%= link_to 'Rus', url_for(locale: :ru) %></li>
   </ul>
           
