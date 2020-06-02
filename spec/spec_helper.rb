@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start
+
 require 'capybara/rspec'
 require_relative 'support/capybara_config.rb'
 # frozen_string_literal: true
