@@ -1,3 +1,6 @@
+<br>
+<a><%= link_to t('.all_boards').upcase, boards_path, style: "color: gray; font-size: large;" %></a>
+<br>
 <h2><%= t'.new_board' %></h2>
 <%= form_with(model: @board, local: true) do |form| %>
   <table>
@@ -12,4 +15,4 @@
   </table>
 <% end %>
 <br>
-<%= link_to t('.all_boards'), boards_path, class: "btn blue waves-effect waves-light left" %>
+

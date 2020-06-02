@@ -9,7 +9,9 @@ RSpec.describe 'Locale', type: :feature do
     context 'when user change locale from en to ru on root' do
       it 'returns page in Russian language' do
         visit '/en'
-        click_link 'Ru'
+        within '.nav-wrapper' do
+          click_link 'Ru'
+        end
 
         expect(page).to have_text('ЛОГОТИП')
         expect(page).to have_current_path '/ru'

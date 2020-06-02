@@ -45,13 +45,14 @@ ru:
         answer: "Ответ"
         create: "Создать карточку"
         all_cards: "Все карточки"
+        back_to_board: "Назад к борду"
       index:
         cards: "Карточки"
         new_card: "Новая карточка"
         question: "Вопрос"
         answer: "Ответ"
         author: "Автор"
-        all_boards: "<Все борды"
+        all_boards: "Все борды"
         edit: "Редактировать"
         destroy: "Удалить"
       show:
@@ -65,11 +66,12 @@ ru:
         board: "Борд"
         update: "Редактировать"
         show: "Показать ответ"
+        back_to_board: "Назад к борду"
       edit:
         edit_card: "Редактировать карточку"
         all_cards: "Все карточки"
         submit: "Сохранить карточку"
-        back: "Назад к карточкам"
+        back: "Назад к карточке"
       form:
         submit: "Подтвердить"
         question: "Вопрос"
@@ -90,3 +92,11 @@ ru:
       edit:
         edit_board: "Редактировать борд"
         all_boards: "Все борды"
+      learning:
+        back_to_board: "Назад к борду"
+      learning_random:
+        back_to_board: "Назад к борду"
+
+  import:
+    index:
+      all_boards: "Все борды"

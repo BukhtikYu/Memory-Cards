@@ -1,10 +1,6 @@
+<br>
+  <%= link_to t('.back').upcase, board_card_path(@board, @card), style: "color: gray; font-size: large;"%>
+<br>
 <h1><%= "#{t('.edit_card')} # #{@card.id}" %></h1>
 
 <%= render '/cards/form' %>
-
-<div class="row">
-  <div class="input-field col s12">
-    <%= link_to t('.back'), board_card_path(@board, @card), class: "btn blue waves-effect waves-light left" %>
-  </div>
-</div>
-

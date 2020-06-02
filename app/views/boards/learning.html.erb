@@ -1,7 +1,8 @@
 <%= stylesheet_link_tag "boards" %>
-<h2><%= @board.name %></h2>
 <br>
-<%= link_to 'All boards', boards_path, class: "btn blue waves-effect waves-light left" %>
+<%= link_to t('.back_to_board').upcase, board_cards_path(@board), style: "color: gray; font-size: large;"%>
+<br>
+<h2><%= @board.name %></h2>
 <br>
 <br>
 <%= render 'carousel' %>

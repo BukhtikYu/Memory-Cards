@@ -45,13 +45,14 @@ en:
         answer: "answer"
         create: "Create card"
         all_cards: "All cards"
+        back_to_board: "Back to board"
       index:
         cards: "Cards"
         new_card: "New card"
         question: "Question"
         answer: "Answer"
         author: "Author"
-        all_boards: "<All boards"
+        all_boards: "All boards"
         edit: "Edit"
         destroy: "Destroy"
       show:
@@ -65,6 +66,7 @@ en:
         board: "Board"
         update: "UPDATE"
         show: "SHOW ANSWER"
+        back_to_board: "Back to board"
       edit:
         edit_card: "Edit Card"
         all_cards: "All cards"
@@ -92,3 +94,11 @@ en:
       edit:
         edit_board: "Edit board"
         all_boards: "All boards"
+      learning:
+        back_to_board: "Back to board"
+      learning_random:
+        back_to_board: "Back to board"
+
+  imports:
+    index:
+      all_boards: "All boards"
