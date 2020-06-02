@@ -1,4 +1,7 @@
 ru:
+  controllers:
+    boards:
+      create: "Борд создан успешно"
   static_pages:
     home:
       boards: "БОРД"
@@ -21,6 +24,8 @@ ru:
       new:
         sign: "Регистрация"
         char: "символов минимум"
+      edit:
+        update: "Обновить"
     sessions:
       new:
         login: "Войти"

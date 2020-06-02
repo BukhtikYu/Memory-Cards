@@ -13,7 +13,7 @@ class BoardsController < ApplicationController
     @board = Board.new(board_params)
     @board.user_id = current_user.id
     if @board.save
-      redirect_to boards_path, notice: 'Board was successfully created'
+      redirect_to boards_path, notice: t('controllers.boards.create')
     else
       render 'new'
     end
@@ -63,7 +63,7 @@ class BoardsController < ApplicationController
       format.js
     end
   end
-  
+
   def update_confidence_from_learning
     @board = Board.find(params[:board_id])
     @card = Card.find(params[:id])

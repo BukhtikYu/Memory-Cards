@@ -1,0 +1,5 @@
+ru:
+  devise:
+    registrations:
+      user:
+        updated: "Ваша учетная запись была успешно обновлена"
