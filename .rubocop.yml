@@ -22,7 +22,8 @@ RSpec/MultipleExpectations:
   Max: 2
 RSpec/ExampleLength:
   Enabled: false
-
+Metrics/BlockLength:
+  Enabled: false
 Style/ClassAndModuleChildren:
   Enabled: false
 Style/Encoding:
