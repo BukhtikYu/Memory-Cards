@@ -1,21 +1,21 @@
-<h1> Update password </h1>
+<h1><%= t '.update_password' %> </h1>
 <%= form_for(@user, :url => { :action => "update_password" } ) do |f| %>
     <%= render "devise/shared/error_messages", resource: @user  %>
     <div class="field">
         <p>
-        <%= f.label :password, "New password" %><br /></p>
+        <%= f.label :password, t('.new') %><br /></p>
         <%= f.password_field :password, :autocomplete => "off"  %>
     </div>
     <div class="field">
-        <%= f.label :password_confirmation, "Password confirmation" %><br />
+        <%= f.label :password_confirmation, t('.confirmation') %><br />
         <%= f.password_field :password_confirmation %>
     </div>
     <div class="action_container">
         <p>
-            <%= f.submit %>
+            <%= f.submit t('.update') %>
             </p>
     </div>
 <% end %>
 <p>
-<%= link_to "Back", :back %>
+<%= link_to t('.back'), :back %>
 </p>

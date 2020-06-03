@@ -25,7 +25,13 @@ ru:
         sign: "Регистрация"
         char: "символов минимум"
       edit:
+        edit: "Редактировать"
         update: "Обновить"
+        change: "Изменить пароль"
+        delete: "Удалиь аккаунт"
+        unhappy: "Недовольны?"
+        delete_b: "Удалить аккаунт"
+        back: "Назад"
     sessions:
       new:
         login: "Войти"
@@ -38,6 +44,15 @@ ru:
         forgot: "Забыли пароль?"
         login: "Войти"
         sign_up: "Регистрация"
+  users:
+    passwords:
+      edit:
+        update_password: "Изменить пароль"
+        new: "Новый пароль"
+        confirmation: "Подтверждение пароля"
+        update: "Обновить"
+        back: "Назад"
+
   cards:
       new:
         new_card: "Новая карточка"
@@ -92,6 +107,7 @@ ru:
       edit:
         edit_board: "Редактировать борд"
         all_boards: "Все борды"
+        update: "Обновить борд"
       learning:
         back_to_board: "Назад к борду"
       learning_random:

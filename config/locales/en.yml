@@ -25,7 +25,13 @@ en:
         sign: "Sign up"
         char: "characters minimum"
       edit:
+        edit: "Edit User"
         update: "Update"
+        change: "Change your password"
+        delete: "Delete my account"
+        unhappy: "Unhappy?"
+        delete_b: "Delete account"
+        back: "Back"
     sessions:
       new:
         login: "Log in"
@@ -38,6 +44,14 @@ en:
         forgot: "Forgot your password?"
         login: "Log in"
         sign_up: "Sign up"
+  users:
+    passwords:
+      edit:
+        update_password: "Update password"
+        new: "New password"
+        confirmation: "Password onfirmation"
+        update: "Update user"
+        back: "Back"
   cards:
       new:
         new_card: "New card"
@@ -94,6 +108,7 @@ en:
       edit:
         edit_board: "Edit board"
         all_boards: "All boards"
+        update: "Update Board"
       learning:
         back_to_board: "Back to board"
       learning_random:
