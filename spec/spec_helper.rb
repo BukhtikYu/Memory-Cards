@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'simplecov'
 SimpleCov.start
 
@@ -23,13 +25,12 @@ require_relative 'support/capybara_config.rb'
 
 Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app,
-    :browser => :chrome,
-    :desired_capabilities => Selenium::WebDriver::Remote::Capabilities.chrome(
-      'chromeOptions' => {
-        'args' => [ "--kiosk" ]
-      }
-    )
-  )
+                                 browser: :chrome,
+                                 desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(
+                                   'chromeOptions' => {
+                                     'args' => ['--kiosk']
+                                   }
+                                 ))
 end
 
 Capybara.default_driver = ENV['CAPYBARA_DRIVER']&.to_sym

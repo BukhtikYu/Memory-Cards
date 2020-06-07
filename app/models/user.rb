@@ -11,7 +11,7 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: [:github, :google_oauth2]
   has_many :boards, dependent: :destroy
   has_many :imports, dependent: :destroy
-
+  has_many :quizzes, dependent: :destroy
 
   # rubocop:disable Metrics/AbcSize
   def self.from_omniauth(auth)

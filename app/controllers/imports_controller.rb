@@ -45,5 +45,4 @@ class ImportsController < ApplicationController
   def import_params
     params.require(:import).permit(:file)
   end
-
 end
