@@ -16,7 +16,8 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <p><%= link_to t('.change'), :edit_password %></p>
+  <p><%= link_to t('.change_password'), :edit_password %></p>
+  <p><%= link_to t('.change_avatar'), :new_avatar %></p>
   <div class="actions">
     <%= f.submit t('.update') %>
   </div>

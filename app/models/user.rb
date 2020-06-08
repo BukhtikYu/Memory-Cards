@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_many :boards, dependent: :destroy
   has_many :imports, dependent: :destroy
   has_many :quizzes, dependent: :destroy
+  has_many :avatars, dependent: :destroy
 
   # rubocop:disable Metrics/AbcSize
   def self.from_omniauth(auth)

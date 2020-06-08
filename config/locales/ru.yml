@@ -2,6 +2,22 @@ ru:
   controllers:
     boards:
       create: "Борд создан успешно"
+    avatars:
+      notice: "Квадратные фотографии являются наиболее подходящими для создания аватара"
+      create: "Аватар был успешно создан"
+      destroy: "Аватар был успешно удален"
+  avatars:
+    new:
+      new: "Новое фото"
+      back: "Назад"
+    form:
+      avatar: "Фото"
+      submit: "Создать фото"
+    index:
+      avatars: "Все фото"
+      download: "Загрузить"
+      destroy: "Удалить"
+      new: "Новое фото"
   static_pages:
     home:
       boards: "БОРД"
@@ -27,7 +43,8 @@ ru:
       edit:
         edit: "Редактировать"
         update: "Обновить"
-        change: "Изменить пароль"
+        change_password: "Изменить пароль"
+        change_avatar: "Изменить фото"
         delete: "Удалиь аккаунт"
         unhappy: "Недовольны?"
         delete_b: "Удалить аккаунт"

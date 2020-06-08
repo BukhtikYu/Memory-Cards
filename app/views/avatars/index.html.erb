@@ -1,0 +1,17 @@
+<h1><%= t'.avatars' %></h1>
+
+<table>
+  <tbody>
+    <% @avatars.each do |avatar| %>
+      <tr>
+        <td><%= image_tag rails_blob_path(avatar.image, disposition: "attachment"), size: "160x160" %></td>
+        <td><%= link_to t('.download'), rails_blob_path(avatar.image, disposition: "attachment"), class: "btn teal waves-effect waves-light btn-small" %>
+        <%= link_to t('.destroy'), avatar, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn red waves-effect waves-light btn-small" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('.new'), new_avatar_path, class: "btn blue waves-effect waves-light" %>

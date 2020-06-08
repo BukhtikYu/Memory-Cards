@@ -48,7 +48,6 @@ Rails.application.routes.draw do
     get 'imports/:id' => 'imports#show'
     delete 'imports/:id' => 'imports#destroy'
 
-
-
+    resources :avatars, except: [:show, :edit, :update]
   end
 end

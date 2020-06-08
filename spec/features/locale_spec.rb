@@ -44,7 +44,7 @@ RSpec.describe 'Locale', type: :feature do
       it 'returns pages in russian language' do
         visit '/ru/users/edit'
         fill_in 'user_username', with: 'Тестовое имя'
-        click_button('Update')
+        click_button('Обновить')
 
         expect(page).to have_text('Ваша учетная запись была успешно обновлена')
       end

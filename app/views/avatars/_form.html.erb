@@ -1,0 +1,15 @@
+<%= form_with(model: avatar, local: true) do |form| %>
+  <%= render "devise/shared/error_messages", resource: avatar  %>
+
+  <div class="file-field input-field required: true">
+    <div class="btn input type:file"><%= t '.avatar' %><%= form.file_field :image, required: true%></div>
+    <div class="file-path-wrapper">
+      <input class="file-path validate" type="text" placeholder="Upload file">
+    </div>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit t('.submit')%>
+  </div>
+<% end %>
