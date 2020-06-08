@@ -11,18 +11,35 @@ require("channels")
 import '../stylesheets/application'
 import 'materialize-css/dist/js/materialize'
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('turbolinks:before-cache', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, {
+        fullWidth: true,
+    });
+});
+
+document.addEventListener('turbolinks:load', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, {
+        fullWidth: true,
+    });
+});
+
+document.addEventListener('DOMContentLoaded',function() {
   var elems = document.querySelectorAll('.carousel');
   var instances = M.Carousel.init(elems, {
     fullWidth: true,
   });
 });
 
+document.addEventListener('turbolinks:before-cache', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+});
+
 document.addEventListener('turbolinks:load', function() {
-  var elems = document.querySelectorAll('.carousel');
-  var instances = M.Carousel.init(elems, {
-    fullWidth: true,
-  });
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -30,11 +47,23 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Sidenav.init(elems);
   });
 
+document.addEventListener('turbolinks:before-cache', function() {
+    var elems = document.querySelectorAll('.tooltipped');
+    var instances = M.Tooltip.init(elems);
+});
+
+document.addEventListener('turbolinks:load', function() {
+    var elems = document.querySelectorAll('.tooltipped');
+    var instances = M.Tooltip.init(elems);
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.tooltipped');
     var instances = M.Tooltip.init(elems);
   });
+
+
+
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
