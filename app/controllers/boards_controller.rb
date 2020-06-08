@@ -24,6 +24,10 @@ class BoardsController < ApplicationController
 
   def index
     @boards = Board.all.where(user: current_user).sort_by(&:id)
+    @boards.each do |board|
+      board.confidence_board = ConfidenceCounter.new(board).count_board_confidence
+      board.save
+    end
   end
 
   def edit
@@ -67,8 +71,13 @@ class BoardsController < ApplicationController
   def update_confidence_from_learning
     @board = Board.find(params[:board_id])
     @card = Card.find(params[:id])
+    @current_confidence = @board.confidence_board
     respond_to do |format|
-      format.js if @card.update(params.permit(:confidence_level))
+      if @card.update(params.permit(:confidence_level))
+        @board.confidence_board = ConfidenceCounter.new(@board).count_board_confidence
+        @board.save
+        format.js
+      end
     end
   end
 

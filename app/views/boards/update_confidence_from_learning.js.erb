@@ -2,3 +2,22 @@ document.getElementById(<%= @card.id %>).innerHTML = "";
 document.getElementById(<%= @card.id %>).insertAdjacentHTML('afterbegin', '<%= escape_javascript(render partial: "confidence", object: @card, as: :card) %>');
 var instance = M.Carousel.getInstance(document.getElementById('carousel'));
 instance.next()
+
+var progress = document.getElementById("myprogressBar"); 
+var width = <%= @current_confidence %>; 
+var identity = setInterval(scene, 15); 
+	
+function scene() { 
+	if (width > <%= @board.confidence_board %>) { 
+	width--; 
+	progress.style.width = width + '%'; 
+	progress.innerHTML = width * 1 + '%';
+	} else if (width < <%= @board.confidence_board %>){ 
+	width++; 
+	progress.style.width = width + '%'; 
+	progress.innerHTML = width * 1 + '%'; 
+	} else {
+	  clearInterval(identity); 
+	} 
+} 
+	

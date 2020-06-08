@@ -44,7 +44,11 @@ class CardsController < ApplicationController
 
   def update_confidence
     respond_to do |format|
-      format.js if @card.update(params.permit(:confidence_level))
+      if @card.update(params.permit(:confidence_level))
+        @board.confidence_board = ConfidenceCounter.new(@board).count_board_confidence
+        @board.save
+        format.js
+      end
     end
   end
 

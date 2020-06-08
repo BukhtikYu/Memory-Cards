@@ -36,3 +36,20 @@
 	  font-size:18px;
 }
 
+#Progress_Status { 
+  width: 50%; 
+  background-color: #ddd; 
+  border-radius: 10px;
+} 
+
+#myprogressBar { 
+  width: 1%; 
+  height: auto;
+  border-radius: 5px; 
+  background-color: #4CAF50; 
+  text-align: center; 
+  line-height: 32px; 
+  color: black; 
+} 
+
+

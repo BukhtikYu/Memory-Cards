@@ -3,6 +3,10 @@
 <%= link_to t('.back_to_board').upcase, board_cards_path(@board), style: "color: gray; font-size: large;"%>
 <br>
 <h2><%= @board.name %></h2>
+<span style = "color: gray; font-size: x-large;">Confidence level: </span>	
+<div id="Progress_Status" style = "display: inline-block;"> 
+  <div id="myprogressBar" style = "width: <%= @board.confidence_board %>%;"><%= @board.confidence_board %>%</div> 
+</div> 
 <br>
 <br>
 <%= render 'carousel' %>
