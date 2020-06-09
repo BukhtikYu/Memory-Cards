@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  validates :email, presence: true
+  validates :email, presence: true, length: { maximum: 256 }
+  validates :username, length: { maximum: 128 }
   validates :username, uniqueness: { allow_blank: true }
 
   # Include default devise modules. Others available are:

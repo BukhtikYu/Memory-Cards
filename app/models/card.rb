@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class Card < ApplicationRecord
-  validates :question, presence: true
+  validates :question, presence: true, length: { maximum: 65_000 }
+  validates :answer, presence: true, length: { maximum: 65_000 }
 
   belongs_to :board
 
