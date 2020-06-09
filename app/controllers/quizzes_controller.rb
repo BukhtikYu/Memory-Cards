@@ -2,7 +2,7 @@
 
 class QuizzesController < InheritedResources::Base
   before_action :authenticate_user!
-  before_action :set_board, only: [:show, :edit, :update, :destroy]
+  before_action :set_quiz, only: [:show, :edit, :update, :destroy]
 
   def new
     @quiz = Quiz.new
@@ -43,7 +43,7 @@ class QuizzesController < InheritedResources::Base
 
   private
 
-  def set_board
+  def set_quiz
     quiz = Quiz.find(params[:id])
     if quiz.user == current_user
       @quiz = quiz

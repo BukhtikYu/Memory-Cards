@@ -131,6 +131,32 @@ en:
       learning_random:
         back_to_board: "Back to board"
 
+  quizzes:
+      index:
+        quizzes: "Quizzes"
+        new_quiz: "New Quiz"
+        name: "Name"
+        user: "User"
+        destroy: "Destroy"
+      new:
+        new_quiz: "New Quiz"
+        name: "Name"
+        create_quiz: "Create Quiz"
+        all_quizzes: "All quizzes"
+        submit: "Submit"
+      edit:
+        edit_quiz: "Edit quiz"
+        all_quizzes: "All quizzes"
+        update: "Update Quiz"
+  quiz_questions:
+      edit:
+        edit_quiz_question: "Edit quiz question"
+        all_quiz_question: "All quiz question"
+        submit: "Update quiz question"
+      index:
+        all_quizzes: "All quizzes"
+
+
   imports:
     index:
       all_boards: "All boards"

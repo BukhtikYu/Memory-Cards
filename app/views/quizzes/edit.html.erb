@@ -1,6 +1,13 @@
-<h1>Editing Quiz</h1>
-
-<%= render 'form', quiz: @quiz %>
-
-<%= link_to 'Show', @quiz %> |
-<%= link_to 'Back', quizzes_path %>
+<br>
+<a><%= link_to t('.all_quizzes').upcase, quizzes_path, style: "color: gray; font-size: large;" %></a>
+<br>
+<h2><%= "#{t('.edit_quiz')} # #{@quiz.name}" %></h2>
+<br>
+<%= form_with(model: @quiz, local: true) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <br>
+  <%= form.submit t('.update'), class: "waves-effect waves-light btn-small" %>
+<% end %>
+<br>

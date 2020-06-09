@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @quiz_question.question %>
+</p>
+
+
+<%= link_to 'Edit', quiz_quiz_questions_edit_path(@quiz, quiz_question) %> |
+<%= link_to 'Back', quiz_questions_path %>

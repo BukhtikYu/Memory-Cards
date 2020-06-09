@@ -1,0 +1,4 @@
+<h1><%= "#{t('.edit_quiz_question')} # #{@quiz_question.id}" %></h1>
+<%= render 'form', quiz_question: @quiz_question %>
+
+<%= link_to 'Show', quiz_quiz_questions_path %>
