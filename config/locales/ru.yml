@@ -6,6 +6,8 @@ ru:
       notice: "Квадратные фотографии являются наиболее подходящими для создания аватара"
       create: "Аватар был успешно создан"
       destroy: "Аватар был успешно удален"
+    imports:
+      create: "Файл был успешно загружен"
   avatars:
     new:
       new: "Новое фото"
@@ -24,6 +26,7 @@ ru:
       future: "В будущем эта страница будет содержать другую информацию"
       hello: "Привет, мир!"
       welcome: "Добро пожаловать!"
+      quizzes: "Квизы"
   layouts:
     headers:
       navbar:
@@ -116,6 +119,7 @@ ru:
         user: "Пользователь"
         edit: "Редактировать"
         destroy: "Удалить"
+        import: "Импорт карточек"
       new:
         new_board: "Новый борд"
         name: "Имя"
@@ -130,6 +134,15 @@ ru:
       learning_random:
         back_to_board: "Назад к борду"
 
-  import:
+  imports:
     index:
       all_boards: "Все борды"
+      all_imports: "Весь импорт"
+      new: "Новый импорт"
+      download: "Загрузить"
+    new:
+      new: "Новый импорт"
+      back: "Назад"
+    form:
+      file: "Файл"
+      submit: "Создать импорт"

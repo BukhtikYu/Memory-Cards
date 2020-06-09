@@ -6,6 +6,8 @@ en:
       notice: "Square photos are the most suitable for creating an avatar"
       create: "Avatar was successfully created"
       destroy: "Avatar was successfully destroyed"
+    imports:
+      create: "File  was successfully uploaded"
   avatars:
     new:
       new: "New Avatar"
@@ -24,6 +26,7 @@ en:
       future: "In a future, this page will contain some another information"
       hello: "Hello world"
       welcome: "Welcome!"
+      quizzes: "QUIZZES"
   layouts:
     headers:
       navbar:
@@ -116,6 +119,7 @@ en:
         user: "User"
         edit: "Edit"
         destroy: "Destroy"
+        import: "CARDS IMPORT"
       new:
         new_board: "New Board"
         name: "Name"
@@ -160,3 +164,12 @@ en:
   imports:
     index:
       all_boards: "All boards"
+      all_imports: "All import"
+      new: "New import"
+      download: "download"
+    new:
+      new: "New import"
+      back: "Back"
+    form:
+      file: "File"
+      submit: "Create import"

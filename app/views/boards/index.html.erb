@@ -2,7 +2,7 @@
 
 <div class="row">
   <a><%= link_to t('.new_board'), new_board_path, class: "btn blue waves-effect waves-light", style: "margin-right: 20px;" %></a>
-  <a><%= link_to "Cards Import", imports_path, class: "btn teal waves-effect waves-light", style: "margin-right: 20px;" %></a>
+  <a><%= link_to t('.import'), imports_path, class: "btn teal waves-effect waves-light", style: "margin-right: 20px;" %></a>
 </div>
 
 <table class="highlight">
@@ -20,4 +20,3 @@
     <% end %>
   </tbody>
 </table>
-

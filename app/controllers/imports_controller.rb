@@ -25,7 +25,7 @@ class ImportsController < ApplicationController
     @import.user_id = current_user.id
     respond_to do |format|
       if @import.save
-        format.html { redirect_to imports_path, notice: 'File was successfully uploaded.' }
+        format.html { redirect_to imports_path, notice: t('controllers.imports.create') }
       else
         format.html { render :new }
       end

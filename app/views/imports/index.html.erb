@@ -2,11 +2,11 @@
 <a><%= link_to t('.all_boards').upcase, boards_path, style: "color: gray; font-size: large;" %></a>
 <br>
 <br>
-<h2>All imports</h2>
+<h2><%= t '.all_imports' %> </h2>
 <br>
 <div class="row">
-  <a><%= link_to t('.New Import'), imports_new_path, class: "btn teal waves-effect waves-light" %></a>
-    <i class="material-icons tooltipped right" data-position="left" data-tooltip="If you want to make import, press new import and choose the file" >help</i>
+<a><%= link_to t('.new'), imports_new_path, class: "btn teal waves-effect waves-light" %></a>
+<i class="material-icons tooltipped right" data-position="left" data-tooltip="If you want to make import, press new import and choose the file" >help</i>
 </div>
 <br>
 <br>
@@ -21,4 +21,3 @@
   <% end %>
   </tbody>
 </table>
-

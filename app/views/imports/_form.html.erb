@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="file-field input-field required: true">
-    <div class="btn input type:file">FILE<%= form.file_field :file, required: true%></div>
+    <div class="btn input type:file"><%= t '.file' %><%= form.file_field :file, required: true%></div>
     <div class="file-path-wrapper">
       <input class="file-path validate" type="text" placeholder="Upload file">
     </div>
   </div>
-  <div input type ="submit" class ="btn waves-effect waves-light" value = "Submit"><%= form.submit %></div>
+  <div input type ="submit" class ="btn waves-effect waves-light" value = "Submit"><%= form.submit t('.submit')%></div>
 
 <% end %>
