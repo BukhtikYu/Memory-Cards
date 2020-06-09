@@ -14,4 +14,7 @@ class Card < ApplicationRecord
     good: 4,
     perfect: 5
   }
+
+  acts_as_list scope: :board 
+  
 end

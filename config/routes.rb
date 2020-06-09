@@ -36,7 +36,9 @@ Rails.application.routes.draw do
         get 'learning_random'
         get 'mark_down'
         get 'mark_up'
+        get 'custom_sort'
       end
+      patch 'cards/:id/move' => 'cards#move'
 
     end
 

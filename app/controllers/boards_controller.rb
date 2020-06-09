@@ -2,7 +2,7 @@
 
 class BoardsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_board, only: [:show, :edit, :update, :destroy, :learning, :learning_random, :mark_down, :mark_up]
+  before_action :set_board, only: [:show, :edit, :update, :destroy, :learning, :learning_random, :mark_down, :mark_up, :custom_sort]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_board
 
   def new
@@ -63,6 +63,13 @@ class BoardsController < ApplicationController
 
   def mark_up
     @cards = @board.cards.sort_by(&:confidence_level_before_type_cast).reverse
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def custom_sort
+    @cards = @board.cards
     respond_to do |format|
       format.js
     end

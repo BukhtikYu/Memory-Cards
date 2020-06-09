@@ -3,5 +3,5 @@
 class Board < ApplicationRecord
   belongs_to :user
   validates :name, presence: true, length: { maximum: 250 }
-  has_many :cards, dependent: :destroy
+  has_many :cards, -> { order(position: :asc) }, dependent: :destroy
 end

@@ -1,6 +1,7 @@
-<table class="highlight">
+<table class="highlight" >
+  <tbody data-controller = "drag" data-drag-url="/boards/<%=@board.id%>/cards/:id/move">
   <% @cards.each do |card| %>
-    <tr>
+    <tr data-id= "<%=card.id %>">
       <td>
         <div class="col s6">
           <div class="card horizontal black-text">
@@ -38,4 +39,5 @@
       </td>
     </tr>
   <% end %>
+  </tbody>
 </table>

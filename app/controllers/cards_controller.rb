@@ -3,7 +3,7 @@
 class CardsController < ApplicationController
   before_action :authenticate_user!
   before_action :get_board
-  before_action :set_card, only: [:show, :edit, :update, :destroy, :update_confidence]
+  before_action :set_card, only: [:show, :edit, :update, :destroy, :update_confidence, :move]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_card
 
   def new
@@ -23,7 +23,7 @@ class CardsController < ApplicationController
   end
 
   def index
-    @cards = @board.cards.sort_by(&:id)
+    @cards = @board.cards
   end
 
   def edit
@@ -50,6 +50,11 @@ class CardsController < ApplicationController
         format.js
       end
     end
+  end
+
+  def move
+    @card.insert_at(params[:position].to_i)
+    head :ok
   end
 
   private
