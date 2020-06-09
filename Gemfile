@@ -35,6 +35,7 @@ gem 'aws-sdk-s3', require: false
 gem 'rails-controller-testing'
 gem 'redcarpet'
 gem 'rouge'
+gem 'active_storage_validations'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -57,7 +58,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false, group: :test
-end
+ end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
