@@ -1,16 +1,25 @@
-<h1><%= t '.hello' %></h1>
-<h1><%= t 'static_pages.home.welcome' %></h1>
-<p><%= t '.future' %></p>
-<div class = "container center">
-  <div class = "waves-effect waves-light btn">
-    <i class="tiny material-icons">bookmark_border</i>
-    <%= link_to t('.boards'), boards_path , class: "black-text text-darken-2" %>
+<div class="parallax-container">
+  <div class="parallax"><img class="responsive-img" <%= image_tag "homepage_image_1.jpg"%>></div>
+</div>
+
+<div class="center align">
+  <h1>Welcome to Memory Cards!</h1>
+</div>
+
+<div class = "container">
+  <div class="row center">
+      <div class = "btn-large waves-effect waves-light">
+        <i class="tiny material-icons">bookmark_border</i>
+        <%= link_to t('.GET STARTED'), boards_path , class: "black-text text-darken-2" %>
+      </div>
+
+      <div class = "waves-effect waves-light btn-large">
+        <i class="tiny material-icons">bookmark_border</i>
+        <%= link_to t('.QUIZZES'), quizzes_path , class: "black-text text-darken-2" %>
+      </div>
   </div>
 </div>
 <br>
-<div class = "container center">
-  <div class = "waves-effect waves-light btn">
-    <i class="tiny material-icons">bookmark_border</i>
-    <%= link_to t('.quizzes'), quizzes_path , class: "black-text text-darken-2" %>
-  </div>
+<div class="parallax-container">
+  <div class="parallax"><img class="responsive-img" <%= image_tag "homepage_image_2.jpg"%>></div>
 </div>
