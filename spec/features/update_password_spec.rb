@@ -16,7 +16,7 @@ RSpec.describe 'Update password', type: :feature do
       fill_in 'user_password_confirmation', with: 'password'
       click_button('Update User')
 
-      expect(page).to have_text('Hello world')
+      expect(page).to have_text('Welcome to Memory Cards')
       expect(page).to have_current_path '/en'
     end
   end

@@ -3,19 +3,19 @@
 </div>
 
 <div class="center align">
-  <h1>Welcome to Memory Cards!</h1>
+  <h1><%= t '.hello' %></h1>
 </div>
 
 <div class = "container">
   <div class="row center">
       <div class = "btn-large waves-effect waves-light">
         <i class="tiny material-icons">bookmark_border</i>
-        <%= link_to t('.GET STARTED'), boards_path , class: "black-text text-darken-2" %>
+        <%= link_to t('.get_started'), boards_path , class: "black-text text-darken-2" %>
       </div>
 
       <div class = "waves-effect waves-light btn-large">
         <i class="tiny material-icons">bookmark_border</i>
-        <%= link_to t('.QUIZZES'), quizzes_path , class: "black-text text-darken-2" %>
+        <%= link_to t('.quizzes'), quizzes_path , class: "black-text text-darken-2" %>
       </div>
   </div>
 </div>

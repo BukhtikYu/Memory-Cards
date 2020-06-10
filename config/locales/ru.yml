@@ -22,15 +22,11 @@ ru:
       new: "Новое фото"
   static_pages:
     home:
-      boards: "БОРД"
-      future: "В будущем эта страница будет содержать другую информацию"
-      hello: "Привет, мир!"
-      welcome: "Добро пожаловать!"
+      get_started: "Начать"
+      hello: "Добро пожаловать в Memory Cards!"
       quizzes: "Квизы"
   layouts:
     headers:
-      navbar:
-        logo: "ЛОГОТИП"
       header_signed_in:
         edit: "Редактировать профиль"
         logged: "Зарегистрирован как"

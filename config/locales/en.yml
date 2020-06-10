@@ -22,10 +22,8 @@ en:
       new: "New Avatar"
   static_pages:
     home:
-      boards: "BOARDS"
-      future: "In a future, this page will contain some another information"
-      hello: "Hello world"
-      welcome: "Welcome!"
+      get_started: "Get started"
+      hello: "Welcome to Memory Cards!"
       quizzes: "QUIZZES"
   layouts:
     headers:
