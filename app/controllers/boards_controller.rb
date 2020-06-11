@@ -35,7 +35,7 @@ class BoardsController < ApplicationController
 
   def update
     if @board.update(board_params)
-      redirect_to boards_path, notice: 'Board was successfully updated'
+      redirect_to boards_path, notice: t('controllers.boards.update')
     else
       render 'edit'
     end
@@ -43,7 +43,7 @@ class BoardsController < ApplicationController
 
   def destroy
     @board.destroy
-    redirect_to boards_path, notice: 'Board was successfully deleted'
+    redirect_to boards_path, notice: t('controllers.boards.destroy')
   end
 
   def learning
@@ -104,10 +104,10 @@ class BoardsController < ApplicationController
   end
 
   def invalid_board
-    redirect_to boards_path, alert: 'Invalid board'
+    redirect_to boards_path, alert: t('controllers.boards.invalid')
   end
 
   def no_access_board
-    redirect_to boards_path, alert: 'No access'
+    redirect_to boards_path, alert: t('controllers.boards.no_access')
   end
 end

@@ -5,7 +5,7 @@
 <div class = "row", style = "float: right;">
   <a style = "font-size: medium;"><%= link_to t('.update'), board_cards_edit_path(@board, @card), class: "btn grey waves-effect waves-light left", style: "margin-right: 20px;"%></a>
   <a style = "font-size: medium;"><%= link_to t('.destroy'), board_card_path(@board, @card), method: :delete,
-                data: { confirm: 'Are you sure?' }, class: "btn grey waves-effect waves-light left" %></a>
+                data: { confirm: t('.sure') }, class: "btn grey waves-effect waves-light left" %></a>
 </div>
 <br>
 <br>

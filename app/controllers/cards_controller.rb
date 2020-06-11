@@ -13,7 +13,7 @@ class CardsController < ApplicationController
   def create
     @card = @board.cards.build(card_params)
     if @card.save
-      redirect_to board_cards_path(@board), notice: 'Card was succsesfully created'
+      redirect_to board_cards_path(@board), notice: t('controllers.cards.create')
     else
       render 'new'
     end
@@ -31,7 +31,7 @@ class CardsController < ApplicationController
 
   def update
     if @card.update(card_params)
-      redirect_to board_card_path(@board, @card), notice: 'Card was succsesfully updated'
+      redirect_to board_card_path(@board, @card), notice: t('controllers.cards.update')
     else
       render 'edit'
     end
@@ -39,7 +39,7 @@ class CardsController < ApplicationController
 
   def destroy
     @card.destroy
-    redirect_to board_cards_path(@board), notice: 'Card was succsesfully deleted'
+    redirect_to board_cards_path(@board), notice: t('controllers.cards.destroy')
   end
 
   def update_confidence
@@ -77,10 +77,10 @@ class CardsController < ApplicationController
   end
 
   def invalid_card
-    redirect_to boards_path, alert: 'Invalid card'
+    redirect_to boards_path, alert: t('controllers.cards.invalid')
   end
 
   def no_access_board
-    redirect_to boards_path, alert: 'No access'
+    redirect_to boards_path, alert: t('controllers.cards.no_access')
   end
 end

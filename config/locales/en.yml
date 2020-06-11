@@ -2,12 +2,22 @@ en:
   controllers:
     boards:
       create: "Board was successfully created"
+      update: "Board was successfully updated"
+      destroy: "Board was successfully deleted"
+      invalid: "Invalid board"
+      no_access: "No access!"
     avatars:
       notice: "Square photos are the most suitable for creating an avatar"
       create: "Avatar was successfully created"
       destroy: "Avatar was successfully destroyed"
     imports:
       create: "File  was successfully uploaded"
+    cards:
+      create: "Card was succsesfully created"
+      update: "Card was succsesfully updated"
+      destroy: "Card was succsesfully deleted"
+      invalid: "Invalid card"
+      no_access: "No access!"
   avatars:
     new:
       new: "New Avatar"
@@ -20,6 +30,7 @@ en:
       download: "DOWNLOAD"
       destroy: "DESTROY"
       new: "New Avatar"
+      sure: "Are you sure?"
   static_pages:
     home:
       get_started: "Get started"
@@ -50,6 +61,7 @@ en:
         unhappy: "Unhappy?"
         delete_b: "Delete account"
         back: "Back"
+        sure: "Are you sure?"
     sessions:
       new:
         login: "Log in"
@@ -78,6 +90,8 @@ en:
         create: "Create card"
         all_cards: "All cards"
         back_to_board: "Back to board"
+        notice: "If you want to type on Ruby:
+    ```ruby >>>your code here<<< ```"
       index:
         cards: "Cards"
         new_card: "New card"
@@ -87,6 +101,8 @@ en:
         all_boards: "All boards"
         edit: "Edit"
         destroy: "Destroy"
+        learning: "Learning"
+        random: "Random"
       show:
         card: "Card"
         question: "Question"
@@ -99,6 +115,7 @@ en:
         update: "UPDATE"
         show: "SHOW ANSWER"
         back_to_board: "Back to board"
+        sure: "Are you sure?"
       edit:
         edit_card: "Edit Card"
         all_cards: "All cards"
@@ -118,6 +135,7 @@ en:
         edit: "Edit"
         destroy: "Destroy"
         import: "CARDS IMPORT"
+        sure: "Are you sure?"
       new:
         new_board: "New Board"
         name: "Name"

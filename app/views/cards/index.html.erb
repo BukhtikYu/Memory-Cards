@@ -1,8 +1,8 @@
 <div class="row" style = "margin-top: 20px;">
 <a><%= link_to t('.all_boards').upcase, boards_path, style: "color: gray; font-size: large;" %></a>
     <h2><%= @board.name %></h2>
-  <a><%= link_to 'Learning', learning_board_path(@board), class: "btn orange waves-effect waves-light", style: "margin-right: 20px;" %></a>
-  <a><%= link_to 'Random', learning_random_board_path(@board), class: "btn orange darken-2 waves-effect waves-light", style: "margin-right: 20px;" %></a><span style = "color: gray; font-size: x-large;"><%= "I know it " + @board.confidence_board.to_s + "%" if @board.confidence_board != nil %></span>
+  <a><%= link_to t('.learning'), learning_board_path(@board), class: "btn orange waves-effect waves-light", style: "margin-right: 20px;" %></a>
+  <a><%= link_to t('.random'), learning_random_board_path(@board), class: "btn orange darken-2 waves-effect waves-light", style: "margin-right: 20px;" %></a><span style = "color: gray; font-size: x-large;"><%= "I know it " + @board.confidence_board.to_s + "%" if @board.confidence_board != nil %></span>
 </div>
 <br>
 <div class="row">

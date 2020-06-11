@@ -15,7 +15,7 @@
         <td style = "text-align: right"><a style = "margin-right: 20px; color: #343434;">
           <%= board.confidence_board %><%= "%" if board.confidence_board != nil %>
           <%= link_to t('.edit'), edit_board_path(board), class: "waves-effect waves-light btn-small" %>
-          <%= link_to t('.destroy'), board, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn red waves-effect waves-light btn-small" %></td>
+          <%= link_to t('.destroy'), board, method: :delete, data: { confirm: t('.sure') }, class: "btn red waves-effect waves-light btn-small" %></td>
       </tr>
     <% end %>
   </tbody>
