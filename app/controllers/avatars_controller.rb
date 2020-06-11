@@ -2,19 +2,23 @@
 
 class AvatarsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_avatar, only: [:destroy]
+  before_action :set_avatar, only: [:destroy, :update]
 
   # GET /avatars
   # GET /avatars.json
   def index
-    @avatars = Avatar.all.where(user: current_user).sort_by(&:created_at)
+    @avatars = Avatar.all.where(user: current_user).order(updated_at: :desc)
   end
 
   # GET /avatars/new
   def new
-    flash[:notice] = t('controllers.avatars.notice')
     @avatar = Avatar.new
   end
+
+  def update
+    @avatar.touch
+    redirect_to avatars_url
+   end
 
   # POST /avatars
   # POST /avatars.json

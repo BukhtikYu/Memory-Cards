@@ -7,7 +7,6 @@ en:
       invalid: "Invalid board"
       no_access: "No access!"
     avatars:
-      notice: "Square photos are the most suitable for creating an avatar"
       create: "Avatar was successfully created"
       destroy: "Avatar was successfully destroyed"
     imports:
@@ -22,7 +21,8 @@ en:
   avatars:
     new:
       new: "New Avatar"
-      back: "BACK"
+      all_avatars: "All avatars"
+      notice: "Square photos are the most suitable for creating an avatar"
     form:
       avatar: "AVATAR"
       submit: "Create Avatar"
@@ -32,6 +32,7 @@ en:
       destroy: "DESTROY"
       new: "New Avatar"
       sure: "Are you sure?"
+      choose: "Choose avatar"
   static_pages:
     home:
       get_started: "Get started"

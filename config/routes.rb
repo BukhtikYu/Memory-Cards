@@ -54,6 +54,6 @@ Rails.application.routes.draw do
       delete 'quiz_questions/:id' => 'quiz_questions#destroy'
     end
 
-    resources :avatars, except: [:show, :edit, :update]
+    resources :avatars, except: [:show, :edit]
   end
 end

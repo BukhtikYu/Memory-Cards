@@ -1,5 +1,8 @@
-<h1><%= t'.new' %></h1>
-
-<%= render 'form', avatar: @avatar %>
 <br>
-<%= link_to t('.back'), avatars_path, class: "btn blue waves-effect waves-light" %>
+<a><%= link_to t('.all_avatars').upcase, avatars_path, style: "color: gray; font-size: large;" %></a>
+<br>
+<div class="row">
+    <h1><%= t'.new' %></h1>
+    <i class="material-icons tooltipped right" data-position="left" data-tooltip="<%= t '.notice' %>">help</i>
+</div>
+<%= render 'form', avatar: @avatar %>
