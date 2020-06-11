@@ -12,6 +12,7 @@ en:
       destroy: "Avatar was successfully destroyed"
     imports:
       create: "File  was successfully uploaded"
+      destroy: "File was successfully destroyed"
     cards:
       create: "Card was succsesfully created"
       update: "Card was succsesfully updated"
@@ -183,6 +184,8 @@ en:
       all_imports: "All import"
       new: "New import"
       download: "download"
+      destroy: "Destroy"
+      notice: "If you want to make import, press new import and choose the file"
     new:
       new: "New import"
       back: "Back"

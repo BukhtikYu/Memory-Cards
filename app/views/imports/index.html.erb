@@ -5,8 +5,8 @@
 <h2><%= t '.all_imports' %> </h2>
 <br>
 <div class="row">
-<a><%= link_to t('.new'), imports_new_path, class: "btn teal waves-effect waves-light" %></a>
-<i class="material-icons tooltipped right" data-position="left" data-tooltip="If you want to make import, press new import and choose the file" >help</i>
+<a><%= link_to t('.new'), new_import_path, class: "btn teal waves-effect waves-light" %></a>
+<i class="material-icons tooltipped right" data-position="left" data-tooltip="<%= t '.notice' %>">help</i>
 </div>
 <br>
 <br>
@@ -17,7 +17,9 @@
   <% @imports.each do |import| %>
     <tr>
       <td><%= import.file.filename %></td>
-      <td><%= link_to t('.download'), rails_blob_path(import.file, disposition: "attachment"), class: "btn teal waves-effect waves-light btn-small" %></td>
+      <td><%= link_to t('.download'), rails_blob_path(import.file, disposition: "attachment"), class: "btn teal waves-effect waves-light btn-small" %>
+      <%= link_to t('.destroy'), import, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn red waves-effect waves-light btn-small" %></td>
+
   <% end %>
   </tbody>
 </table>

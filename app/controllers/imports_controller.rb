@@ -2,6 +2,7 @@
 
 class ImportsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_import, only: [:destroy]
 
   # GET /imports
   def index
@@ -38,9 +39,15 @@ class ImportsController < ApplicationController
 
   # DELETE /imports/1
   def destroy
+    @import.destroy
+    redirect_to imports_path, notice: t('controllers.imports.destroy')
   end
 
   private
+
+  def set_import
+    @import = Import.find(params[:id])
+  end
 
   def import_params
     params.require(:import).permit(:file)

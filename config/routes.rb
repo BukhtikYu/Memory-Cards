@@ -42,12 +42,7 @@ Rails.application.routes.draw do
 
     end
 
-    get 'imports/new' => 'imports#new'
-    post 'imports' => 'imports#create'
-    get 'imports' => 'imports#index'
-    patch 'imports/:id' => 'imports#update'
-    get 'imports/:id' => 'imports#show'
-    delete 'imports/:id' => 'imports#destroy'
+    resources :imports
 
     resources :quizzes do
       get 'quiz_questions/new' => 'quiz_questions#new'
