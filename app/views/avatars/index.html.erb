@@ -6,8 +6,7 @@
       <tr>
         <td><%= image_tag rails_blob_path(avatar.image, disposition: "attachment"), size: "160x160" %></td>
         <td><%= link_to t('.download'), rails_blob_path(avatar.image, disposition: "attachment"), class: "btn teal waves-effect waves-light btn-small" %>
-        <%= link_to t('.destroy'), avatar, method: :delete, data: { confirm: t('.sure') }, class: "btn red waves-effect waves-light btn-small" %></td>
-            <%= link_to t('.destroy'), avatar, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn red waves-effect waves-light btn-small" %>
+            <%= link_to t('.destroy'), avatar, method: :delete, data: { confirm: t('.sure') }, class: "btn red waves-effect waves-light btn-small" %>
             <%= link_to t('.choose'), avatar_path(avatar), method: :patch, class: "btn blue waves-effect waves-light btn-small" %>
         </td>
       </tr>
