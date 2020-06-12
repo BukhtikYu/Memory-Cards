@@ -24,6 +24,10 @@ class CardsController < ApplicationController
 
   def index
     @cards = @board.cards
+    respond_to do |format|
+      format.html
+      format.csv { send_data @cards.to_csv, filename: "#{@board.name}.csv" }
+    end
   end
 
   def edit

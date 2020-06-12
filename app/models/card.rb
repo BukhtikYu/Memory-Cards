@@ -16,5 +16,17 @@ class Card < ApplicationRecord
   }
 
   acts_as_list scope: :board 
-  
+
+  def self.to_csv
+    attributes = %w{question answer}
+
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+
+      all.each do |card|
+        csv << attributes.map{ |attr| card.send(attr) }
+      end
+    end
+  end  
+
 end

@@ -104,6 +104,7 @@ ru:
         destroy: "Удалить"
         learning: "Изучение"
         random: "Рандом"
+        export CSV: "Экспорт CSV"
       show:
         card: "Kарточкa"
         question: "Вопрос"

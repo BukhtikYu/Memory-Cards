@@ -105,6 +105,7 @@ en:
         destroy: "Destroy"
         learning: "Learning"
         random: "Random"
+        export CSV: "Export CSV"
       show:
         card: "Card"
         question: "Question"
