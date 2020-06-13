@@ -1,11 +1,11 @@
 <%= form_with(model: [@board, @card], local: true) do |form| %>
   <div class="row">
     <div class="input-field col s6">
-      <label for="textarea1"><%= t'.question' %>:</label>
+      <label class="<%="active" if action_name == "edit" %>" for="textarea1"><%= t'.question' %>:</label>
       <%= form.text_area :question, class: "materialize-textarea" %>
     </div>
     <div class="input-field col s6">
-      <label for="textarea1"><%= t'.answer' %>:</label>
+      <label class="<%="active" if action_name == "edit" %>" for="textarea1"><%= t'.answer' %>:</label>
       <%= form.text_area :answer, class: "materialize-textarea" %>
     </div>
   </div>
