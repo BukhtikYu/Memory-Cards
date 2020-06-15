@@ -18,6 +18,8 @@ en:
       destroy: "Card was succsesfully deleted"
       invalid: "Invalid card"
       no_access: "No access!"
+    registrations:
+      verification: "verification failed, please try again"
   avatars:
     new:
       new: "New Avatar"

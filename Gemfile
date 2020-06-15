@@ -43,6 +43,7 @@ gem 'lefthook'
 gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
 gem 'rubocop-rspec', require: false
+gem 'recaptcha'
 
 group :development, :test do
   # Cal 'byebug' anywhere in the code to stop execution and get a debugger console
