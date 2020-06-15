@@ -42,7 +42,11 @@ Rails.application.routes.draw do
 
     end
 
-    resources :imports
+    resources :imports do
+      member do
+        post 'create_csv'
+      end
+    end
 
     resources :quizzes do
       get 'quiz_questions/new' => 'quiz_questions#new'

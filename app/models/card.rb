@@ -15,7 +15,7 @@ class Card < ApplicationRecord
     perfect: 5
   }
 
-  acts_as_list scope: :board 
+  acts_as_list scope: :board
 
   def self.to_csv
     attributes = %w{question answer}
@@ -27,6 +27,6 @@ class Card < ApplicationRecord
         csv << attributes.map{ |attr| card.send(attr) }
       end
     end
-  end  
+  end
 
 end

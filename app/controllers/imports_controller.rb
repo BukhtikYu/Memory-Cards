@@ -2,7 +2,7 @@
 
 class ImportsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_import, only: [:destroy]
+  before_action :set_import, only: [:destroy, :create_csv]
 
   # GET /imports
   def index
@@ -41,6 +41,12 @@ class ImportsController < ApplicationController
   def destroy
     @import.destroy
     redirect_to imports_path, notice: t('controllers.imports.destroy')
+  end
+
+  def create_csv
+    csv = CsvImporter.new(import: @import, user: current_user)
+    csv.card_create
+    redirect_to boards_path, notice: 'Cards are successfully imported!'
   end
 
   private

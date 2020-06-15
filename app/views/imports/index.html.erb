@@ -19,6 +19,8 @@
       <td><%= import.file.filename %></td>
       <td><%= link_to t('.download'), rails_blob_path(import.file, disposition: "attachment"), class: "btn teal waves-effect waves-light btn-small" %>
       <%= link_to t('.destroy'), import, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn red waves-effect waves-light btn-small" %></td>
+      <td><%= link_to 'create cards', create_csv_import_path(import),method: :post, class: "btn teal waves-effect waves-light btn-small" %></td>
+
 
   <% end %>
   </tbody>
