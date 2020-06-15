@@ -31,11 +31,11 @@ gem 'omniauth-github'
 gem 'omniauth-google-oauth2'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+gem 'active_storage_validations'
 gem 'aws-sdk-s3', require: false
 gem 'rails-controller-testing'
 gem 'redcarpet'
 gem 'rouge'
-gem 'active_storage_validations'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -59,7 +59,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false, group: :test
- end
+end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
@@ -73,4 +73,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem "acts_as_list", "~> 1.0"
+gem 'acts_as_list', '~> 1.0'

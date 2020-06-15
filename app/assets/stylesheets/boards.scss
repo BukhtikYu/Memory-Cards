@@ -5,7 +5,7 @@
 
 .carousel {
     margin: 0 auto;
-    
+
     .card {
     height: 100%;
     overflow: auto;
@@ -31,25 +31,23 @@
 }
 .carousel.carousel-slider .carousel-item p {
 	font-size: 25px;
-}	
+}
 .carousel.carousel-slider .carousel-item .smaller {
 	  font-size:18px;
 }
 
-#Progress_Status { 
-  width: 50%; 
-  background-color: #ddd; 
+#Progress_Status {
+  width: 50%;
+  background-color: #ddd;
   border-radius: 10px;
-} 
+}
 
-#myprogressBar { 
-  width: 1%; 
+#myprogressBar {
+  width: 1%;
   height: auto;
-  border-radius: 5px; 
-  background-color: #4CAF50; 
-  text-align: center; 
-  line-height: 32px; 
-  color: black; 
-} 
-
-
+  border-radius: 5px;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 32px;
+  color: black;
+}
