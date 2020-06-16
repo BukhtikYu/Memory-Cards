@@ -47,6 +47,7 @@ Rails.application.routes.draw do
         post 'create_csv'
       end
     end
+    get 'download_template' => 'imports#download_template'
 
     resources :quizzes do
       get 'quiz_questions/new' => 'quiz_questions#new'

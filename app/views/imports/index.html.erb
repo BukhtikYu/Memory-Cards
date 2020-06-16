@@ -5,8 +5,9 @@
 <h2><%= t '.all_imports' %> </h2>
 <br>
 <div class="row">
-<a><%= link_to t('.new'), new_import_path, class: "btn teal waves-effect waves-light" %></a>
+<%= link_to t('.new'), new_import_path, class: "btn teal waves-effect waves-light", style: "margin-right: 20px;" %>
 <i class="material-icons tooltipped right" data-position="left" data-tooltip="<%= t '.notice' %>">help</i>
+<%= link_to t('.download_template'), download_template_path(format: :csv), class: "btn blue-grey lighten-1 waves-effect waves-light right", style: "margin-right: 20px;" %>
 </div>
 <br>
 <br>

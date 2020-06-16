@@ -46,7 +46,17 @@ class ImportsController < ApplicationController
   def create_csv
     csv = CsvImporter.new(import: @import, user: current_user)
     csv.card_create
-    redirect_to boards_path, notice: 'Cards are successfully imported!'
+    redirect_to boards_path, notice: t('controllers.imports.success')
+  end
+
+  def download_template
+    attributes = %w[board_name question answer]
+    csv_template = CSV.generate(headers: true) do |csv|
+      csv << attributes
+    end
+    respond_to do |format|
+      format.csv { send_data csv_template, filename: "import_template.csv" }
+    end
   end
 
   private

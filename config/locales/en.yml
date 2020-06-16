@@ -12,6 +12,7 @@ en:
     imports:
       create: "File  was successfully uploaded"
       destroy: "File was successfully destroyed"
+      success: "Cards are successfully imported!"
     cards:
       create: "Card was succsesfully created"
       update: "Card was succsesfully updated"
@@ -190,6 +191,7 @@ en:
       download: "download"
       destroy: "Destroy"
       notice: "If you want to make import, press new import and choose the file"
+      download_template: "Download template"
     new:
       new: "New import"
       back: "Back"
