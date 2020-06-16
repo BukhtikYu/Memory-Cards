@@ -9,8 +9,7 @@
     "materialize-css": "^1.0.0",
     "rails-ujs": "^5.2.4-3",
     "sortablejs": "^1.10.2",
-    "stimulus": "^1.1.1",
-    "turbolinks": "^5.2.0"
+    "stimulus": "^1.1.1"
   },
   "version": "0.1.0",
   "devDependencies": {

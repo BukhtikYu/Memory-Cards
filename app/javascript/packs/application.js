@@ -4,26 +4,11 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
-require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
 import '../stylesheets/application'
 import 'materialize-css/dist/js/materialize'
-
-document.addEventListener('turbolinks:before-cache', function() {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, {
-        fullWidth: true,
-    });
-});
-
-document.addEventListener('turbolinks:load', function() {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, {
-        fullWidth: true,
-    });
-});
 
 document.addEventListener('DOMContentLoaded',function() {
   var elems = document.querySelectorAll('.carousel');
@@ -32,45 +17,15 @@ document.addEventListener('DOMContentLoaded',function() {
   });
 });
 
-document.addEventListener('turbolinks:before-cache', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems);
-});
-
-document.addEventListener('turbolinks:load', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems);
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems);
   });
 
-document.addEventListener('turbolinks:before-cache', function() {
-    var elems = document.querySelectorAll('.tooltipped');
-    var instances = M.Tooltip.init(elems);
-});
-
-document.addEventListener('turbolinks:load', function() {
-    var elems = document.querySelectorAll('.tooltipped');
-    var instances = M.Tooltip.init(elems);
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.tooltipped');
     var instances = M.Tooltip.init(elems);
   });
-
-document.addEventListener('turbolinks:before-cache', function() {
-    var elems = document.querySelectorAll('.parallax');
-    var instances = M.Parallax.init(elems);
-});
-
-document.addEventListener('turbolinks:load', function() {
-    var elems = document.querySelectorAll('.parallax');
-    var instances = M.Parallax.init(elems);
-});
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.parallax');
