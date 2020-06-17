@@ -14,7 +14,7 @@ class CsvImporter
       @board = Board.find_or_initialize_by(name: row['board_name'])
       @board.user_id = @user.id
       @board.save
-      @card = @board.cards.build(question: row['card_question'], answer: row['card_answer'])
+      @card = @board.cards.build(question: row['question'], answer: row['answer'])
       @card.save
     end
   end
