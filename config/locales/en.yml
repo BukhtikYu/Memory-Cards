@@ -122,6 +122,8 @@ en:
         show: "SHOW ANSWER"
         back_to_board: "Back to board"
         sure: "Are you sure?"
+        edit_card: "Edit Card"
+        submit: "Update card"
       edit:
         edit_card: "Edit Card"
         all_cards: "All cards"

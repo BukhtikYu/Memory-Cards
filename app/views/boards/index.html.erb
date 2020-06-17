@@ -14,9 +14,11 @@
         <td><%= link_to board.name, board_cards_path(board.id), class: "waves-effect waves-teal btn-flat" %></td>
         <td style = "text-align: right"><a style = "margin-right: 20px; color: #343434;">
           <%= board.confidence_board %><%= "%" if board.confidence_board != nil %>
-          <%= link_to t('.edit'), edit_board_path(board), class: "waves-effect waves-light btn-small" %>
+          <%= link_to t('.edit'), "##{board.id}-modal", remote: true, class: "btn-small modal-trigger" %>
           <%= link_to t('.destroy'), board, method: :delete, data: { confirm: t('.sure') }, class: "btn red waves-effect waves-light btn-small" %></td>
       </tr>
+      <%= render partial: 'board_modal_form', locals: { board: board } %>
     <% end %>
   </tbody>
 </table>
+

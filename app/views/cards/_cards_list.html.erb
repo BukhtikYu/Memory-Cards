@@ -1,5 +1,5 @@
 <table class="highlight" >
-  <tbody data-controller = "drag" data-drag-url="/boards/<%=@board.id%>/cards/:id/move">
+  <tbody data-controller="drag" data-drag-url="/boards/<%=@board.id%>/cards/:id/move">
   <% @cards.each do |card| %>
     <tr data-id= "<%=card.id %>">
       <td>
@@ -28,16 +28,18 @@
       <td></td>
       <td style = "text-align: right">
         <div class="col s12">
-          <%= link_to t('.show'),  board_card_path(@board, card), class: "waves-effect waves-teal btn-flat btn-small" %>
+          <%= link_to t('.show'), board_card_path(@board, card), class: "waves-effect waves-teal btn-flat btn-small" %>
         </div>
         <div class="col s12">
-          <%= link_to t('.edit'), board_cards_edit_path(@board, card), class: "waves-effect waves-teal btn-flat btn-small" %>
+          <%= link_to t('.update'), "##{card.id}-modal", remote: true, class: " btn-flat modal-trigger btn-small" %>
         </div>
-        <div class="col s12">
+          <div class="col s12">
           <%= link_to t('.destroy'), [@board, card], method: :delete, data: { confirm: 'Are you sure?' }, class: "waves-effect waves-teal btn-flat btn-small" %>
         </div>
       </td>
     </tr>
+    <%= render partial: 'modal_form', locals: { card: card } %>
   <% end %>
   </tbody>
 </table>
+

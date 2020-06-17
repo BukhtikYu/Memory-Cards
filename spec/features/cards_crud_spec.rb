@@ -55,12 +55,12 @@ RSpec.describe 'Cards', type: :feature do
         it 'edits question and answer in card' do
           visit '/en/boards'
           click_link 'TESTBOARD'
-          click_link 'Edit'
+          click_link 'Update'
           fill_in id: 'card_question', with: 'QUESTIONEDITED'
           fill_in id: 'card_answer', with: 'ANSWEREDITED'
-          click_button('Submit')
+          click_button('submit')
           expect(page).to have_text('QUESTIONEDITED')
-          click_button 'SHOW'
+          screenshot_and_save_page
           expect(page).to have_text('ANSWEREDITED')
         end
 

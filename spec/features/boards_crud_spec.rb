@@ -38,7 +38,7 @@ RSpec.describe 'Boards', type: :feature do
         visit '/en/boards'
         click_link 'Edit'
         fill_in id: 'board_name', with: 'TESTEDITED'
-        click_button('Update Board')
+        click_button('submit')
         expect(page).to have_text('TESTEDITED')
       end
 

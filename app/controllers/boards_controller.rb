@@ -34,7 +34,8 @@ class BoardsController < ApplicationController
   end
 
   def update
-    if @board.update(board_params)
+    @board = Board.find(board_params['board_id'])
+    if @board.update(board_params.except(:board_id))
       redirect_to boards_path, notice: t('controllers.boards.update')
     else
       render 'edit'
@@ -91,7 +92,7 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:name)
+    params.require(:board).permit(:name, :board_id)
   end
 
   def set_board

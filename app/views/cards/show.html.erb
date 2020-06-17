@@ -3,9 +3,9 @@
 <br>
   <%= link_to t('.back_to_board').upcase, board_cards_path(@board), style: "color: gray; font-size: large;"%>
 <div class = "row", style = "float: right;">
-  <a style = "font-size: medium;"><%= link_to t('.update'), board_cards_edit_path(@board, @card), class: "btn grey waves-effect waves-light left", style: "margin-right: 20px;"%></a>
+  <a style = "font-size: medium;"><%= link_to t('.update'), "##{@card.id}-modal", remote: true, class: "btn modal-trigger grey left", style: "margin-right: 20px;"%></a>
   <a style = "font-size: medium;"><%= link_to t('.destroy'), board_card_path(@board, @card), method: :delete,
-                data: { confirm: t('.sure') }, class: "btn grey waves-effect waves-light left" %></a>
+                data: { confirm: t('.sure') }, class: "btn red waves-effect waves-light left" %></a>
 </div>
 <br>
 <br>
@@ -32,3 +32,6 @@
     <br>
   </div>
 </div>
+
+<%= render partial: 'modal_form', locals: { card: @card } %>
+

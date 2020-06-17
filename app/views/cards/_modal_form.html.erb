@@ -1,0 +1,22 @@
+<div class="modal" id=<%="#{card.id}-modal"%>>
+  <div class="modal-content">
+    <h2><%= "Edit Card # #{card.id}" %></h2>
+    <%= form_with(model: [@board, card], local: true) do |form| %>
+    <div class="row">
+      <div class="input-field col s6">
+        <label class="active" for="textarea1"><%= t'.question' %>:</label>
+        <%= form.text_area :question, class: "materialize-textarea" %>
+      </div>
+      <div class="input-field col s6">
+        <label class="active" for="textarea1"><%= t'.answer' %>:</label>
+        <%= form.text_area :answer, class: "materialize-textarea" %>
+      </div>
+    </div>
+    <%= form.hidden_field :card_id, value: card.id %>
+    <div class="row">
+      <%= form.submit "submit", class: "btn orange left" %>
+    </div>
+    <% end %>
+  </div>
+</div>
+

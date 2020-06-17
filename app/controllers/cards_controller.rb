@@ -34,8 +34,9 @@ class CardsController < ApplicationController
   end
 
   def update
-    if @card.update(card_params)
-      redirect_to board_card_path(@board, @card), notice: t('controllers.cards.update')
+    @card = Card.find(card_params['card_id'])
+    if @card.update(card_params.except(:card_id))
+      redirect_to board_cards_path(@board), notice: t('controllers.cards.update')
     else
       render 'edit'
     end
@@ -64,7 +65,7 @@ class CardsController < ApplicationController
   private
 
   def card_params
-    params.require(:card).permit(:question, :answer)
+    params.require(:card).permit(:question, :answer, :card_id)
   end
 
   def get_board

@@ -8,15 +8,9 @@
 
 <div class = "container">
   <div class="row center">
-      <div class = "btn-large waves-effect waves-light">
-        <i class="tiny material-icons">bookmark_border</i>
-        <%= link_to t('.get_started'), boards_path , class: "black-text text-darken-2" %>
-      </div>
-
-      <div class = "waves-effect waves-light btn-large">
-        <i class="tiny material-icons">bookmark_border</i>
-        <%= link_to t('.quizzes'), quizzes_path , class: "black-text text-darken-2" %>
-      </div>
+        <%= link_to boards_path, class: "waves-effect waves-light btn-large" do %>
+          <i class="material-icons left">bookmarks</i> <%= t('.get_started') %>
+        <% end %>
   </div>
 </div>
 <br>

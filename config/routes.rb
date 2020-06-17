@@ -26,7 +26,7 @@ Rails.application.routes.draw do
       get 'cards/:id' => 'cards#show', as: 'card'
       get 'cards' => 'cards#index'
       get 'cards/:id/edit' => 'cards#edit', as: 'cards_edit'
-      patch 'cards/:id'=> 'cards#update'
+      patch 'cards/:id' => 'cards#update'
       delete 'cards/:id' => 'cards#destroy'
       patch 'cards/:id/update_confidence' => 'cards#update_confidence', as: 'card_update_confidence'
       patch 'cards/:id/update_confidence_from_learning' => 'boards#update_confidence_from_learning',
